@@ -1,0 +1,23 @@
+Vezave:
+
+PWM out 2-13 {
+motor 1 ->  2;
+motor 2 ->  3;
+grelec 1 ->  4;
+grelec 2 ->  5;
+}
+
+stepper motor 1 ->  2(4) pini;  // odvisno od tipa stepperja
+stepper motor 2 ->  2(4) pini;  // odvisno od tipa stepperja
+
+Analog input {
+termistor od grelca 1 -> 0;
+termistor od grelca 2 -> 1;
+termistor v posodi z maso -> 2;
+termistor na mehanizmu za doziranje -> 3;
+ultrazvočni senzor -> 4;
+}
+
+// + povezava na sistem s kovanci, verjetno nekje med 14. in 21. pinom, ker imajo ti pini podporo za posebne interface.
+// + sistem za mazanje (nekaj motorjev in digitalnih inputov)
+// + kartica ugodnosti (spet en poseben interface)
