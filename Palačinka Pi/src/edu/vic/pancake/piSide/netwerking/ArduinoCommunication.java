@@ -8,9 +8,14 @@ package edu.vic.pancake.piSide.netwerking;
 public class ArduinoCommunication {
     public static ArduinoCommunication instance = new ArduinoCommunication();
     private boolean shouldExit = false;
+    private ListenerThread listenerThread;
 
     private ArduinoCommunication() {
+        listenerThread = new ListenerThread();
+    }
 
+    public void sendToArduino(MessageTypes type){
+        //TODO pošlji sporočilo
     }
 
     public void shutDown(){
