@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pi4j-service.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/pi4j-service.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

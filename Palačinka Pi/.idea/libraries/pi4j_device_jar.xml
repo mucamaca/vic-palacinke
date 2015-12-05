@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pi4j-device.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/pi4j-device.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
