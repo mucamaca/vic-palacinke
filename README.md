@@ -1,4 +1,4 @@
 # Vič ima palačinke
-Koda za pancakeVič projekt, ki ga delamo v sklopu tehničnih projektov na gimnaziji Vič.
+Koda za mašino za izdelavo palačink, ki jo delamo v sklopu tehničnih projektov na gimnaziji Vič.
 
-Koda je napisana za Arduino Mega.
+Koda je napisana za Arduino Mega in Raspberry Pi. Za samo delovanje mašine uporabljamo Arduino, medtem ko za grafični vmesnik skrbi Malina.
