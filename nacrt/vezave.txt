@@ -13,7 +13,7 @@ PWM out 2-13 {
 //sodi pini so output, lihi so input
 non pwm{
   // PI KOMUNIKACIJA
-  [22 do 29]; // 8 bitov, torej 256 vrednosti
+  [22 do 25 OUT, 26 do 29 IN]; // 4 bite v vsako smer, torej 16 vrednosti v vsako smer
   // OUT
   grelec zgori ->  30;
   grelec spodi ->  32;
