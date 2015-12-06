@@ -20,9 +20,10 @@ public class Main implements Runnable{
         try {
             setUpPiStuff();
         }catch (NotRunningOnPiException e) {
-            System.out.println("You aren't running on PI:");
+            System.err.println("You aren't running on PI:");
             e.printStackTrace();
             runningOnPi = false;
+            return;
         }
         System.out.println("Opening GUI...");
         frame = new PancakeGuiFrame(this);
@@ -32,7 +33,7 @@ public class Main implements Runnable{
     private void setUpPiStuff() throws NotRunningOnPiException{
         try{
             SystemInfo.getHardware();
-        } catch (InterruptedException | IOException e) {
+        } catch (InterruptedException | IOException | RuntimeException e) {
             throw new NotRunningOnPiException();
         }
         //Če smo kle, pol laufamo na piju

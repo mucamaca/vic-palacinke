@@ -1,18 +1,18 @@
 package edu.vic.pancake.piSide.netwerking;
 
 /**
- * Class ki skrbi za komunikacijo za Arduinom.
+ * Class ki skrbi za komunikacijo z Arduinom.
  * @author Matevž
  * @author Luka
  */
+
 public class ArduinoCommunication {
     public static ArduinoCommunication instance;
     private boolean shouldExit = false;
     private ListenerThread listenerThread;
 
-    public static void init(){
-        instance = new ArduinoCommunication();
-    }
+    public static void init() { instance = new ArduinoCommunication(); }
+
 
     private ArduinoCommunication() {
         listenerThread = new ListenerThread();
