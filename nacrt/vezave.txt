@@ -2,29 +2,26 @@ Vezave:
 
 PWM out 2-13 {
   motor mikser ->  2;
-  motor tekoči trax ->  3;
+  stepper motor tekoči trak -> 3,4;
+  motor za vrtenje valjčka za rolanje palačink -> 5;
+  stepper motor za dvigovanje valjčka -> 6;
+  stepper motor za izbiro namaza -> 7;
+  stepper motor za stiskanje namaza -> 8;
+  motor za črpanje vode po cevkah -> 9
 }
 
 //sodi pini so output, lihi so input
 non pwm{
-  //OUT
-  peltier za hlajenje -> 22;
-  peltier za hlajenje -> 24;
-  grelec zgori ->  26;
-  grelec spodi ->  28;
-  //IN
-  ultrazvočni senzor za količino mase -> 23
+  // PI KOMUNIKACIJA
+  [22 do 29]; // 8 bitov, torej 256 vrednosti
+  // OUT
+  grelec zgori ->  30;
+  grelec spodi ->  32;
+  cel kup ventilov za šobe -> [34 do 34 + x, tako da velja 2|x in x < 19]
+  // IN
+  termistorsko vezje -> 31; // To se nekak veže več termistorjev v eno vezje in potem se da digitalno odčitavat
 }
 
-stepper motor za ventil(ator) ->  4 pini - 3 PWM in en navadn;  // odvisno od tipa stepperja
-
-Analog input {
-  termistor od grelca 1 -> 0;
-  termistor od grelca 2 -> 1;
-  termistor v posodi z maso -> 2;
+Analog input(1){
+  ultrasonic -> 1;
 }
-
-// + tipkovnca (paše med sistem za mazanje)
-// + povezava na sistem s kovanci, verjetno nekje med 14. in 21. pinom, ker imajo ti pini podporo za posebne interface.
-// + sistem za mazanje (nekaj motorjev in digitalnih inputov)
-// + kartica ugodnosti (spet en poseben interface)
