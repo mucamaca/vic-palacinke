@@ -6,7 +6,7 @@ package edu.vic.pancake.piSide.netwerking;
  */
 public enum MessageTypes {
     //TODO dodaj vse tipe pred podpičje
-    ;
+    WAKEUP;
 
     public boolean isSingleUse(){
         //TODO funkcija naj returna true, če se sporočilo lahko pošlje/prejme samo enkrat
