@@ -26,7 +26,7 @@ public class PancakeGuiFrame extends JFrame{
         addStuff();
         animatorThread = new AnimatorThread();
         setLocation(0, 0);
-        setSize(800, 600);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
     }

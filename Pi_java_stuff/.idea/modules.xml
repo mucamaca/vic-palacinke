@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Palačinka Pi.iml" filepath="$PROJECT_DIR$/Palačinka Pi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/palacinka_pi.iml" filepath="$PROJECT_DIR$/palacinka_pi.iml" />
     </modules>
   </component>
 </project>
