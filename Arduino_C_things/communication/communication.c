@@ -1,3 +1,5 @@
+/* Glavne funkcijeArduino side Arduino-Pi komunikacija
+
 /* commenti, k se koncajo z podpicjem so v resnici del kode, sam so commentani zato, 
 da mi gcc ne panicari ker niso tiste funkcije definirane
 */
