@@ -1,4 +1,10 @@
-/* Glavne funkcijeArduino side Arduino-Pi komunikacija
+#include "communication.h"
+
+#ifndef Arduino_h
+#include "../tests/comm_test.h"
+
+#endif
+/* Glavne funkcije Arduino side Arduino-Pi komunikacije*/
 
 /* commenti, k se koncajo z podpicjem so v resnici del kode, sam so commentani zato, 
 da mi gcc ne panicari ker niso tiste funkcije definirane
