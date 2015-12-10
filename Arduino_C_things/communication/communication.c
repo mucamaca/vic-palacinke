@@ -1,14 +1,14 @@
+/* Glavne funkcije Arduino side Arduino-Pi komunikacije*/
 #include "communication.h"
 
 #ifndef Arduino_h
 #include "../tests/comm_test.h"
-
 #endif
-/* Glavne funkcije Arduino side Arduino-Pi komunikacije*/
 
 /* commenti, k se koncajo z podpicjem so v resnici del kode, sam so commentani zato, 
 da mi gcc ne panicari ker niso tiste funkcije definirane
 */
+
 typedef char read_t; // tip, v katerega se shranijo z maline prebrani podatki
 typedef char write_t; // tip, ki ga prek pinov posiljamo malini
 
