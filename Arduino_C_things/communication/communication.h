@@ -4,15 +4,14 @@
 typedef char read_t;
 typedef char write_t;
 
-const read_t idle = 0, //0000
-	     void_pancake = 1, // 0001 
+const read_t idle,
+	     void_pancake, 
 	     // tuki pridejo ostali okusi (ko si jih bomo zmislili)
-	     err = 15; //1111
+	     err; //1111
 
-const write_t ok = 0, //0000
-	      err_no_masa = 1, //0001
-	      err_namaz_not_available = 2;//0010
-	      // itd do 15
+const write_t ok,
+	      err_no_mass,
+	      err_stuffing_not_available;
 
 void comm_write(write_t value);
 
