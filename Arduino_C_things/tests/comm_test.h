@@ -5,7 +5,7 @@ Arduino side komunikacije direktno na racunalniku
 
 #ifndef Arduino_h
 
-void pinMode(uint8_t pin, uint8_t);
+void pinMode(uint8_t pin, uint8_t mode);
 
 void digitalWrite(uint8_t pin, uint8_t value);
 
