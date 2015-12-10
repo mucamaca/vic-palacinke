@@ -23,12 +23,18 @@ public class SplashPanel extends JPanel{
         Font splashFont =  new Font(fontName, Font.BOLD, 30);
         splashText.setFont(splashFont);
         splashText.setHorizontalAlignment(SwingConstants.CENTER);
+        setPreferredSize(frame.getSize());
         add(splashText);
     }
 
     private void update(){
         //TODO more work neeeded
         repaint();
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
     }
 
     /**

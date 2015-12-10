@@ -9,22 +9,16 @@ import java.awt.*;
  * Ta class sestavi okno za izbiro palačink
  */
 public class PancakeGuiFrame extends JFrame{
-    public static enum Screens {
+    public enum Screens {
         SPLASH, INSERT_MONEY, NUTELLA_SELECTOR;
     }
-    public Screens currentScreen = Screens.SPLASH;
+    public Screens currentScreen;
     private Main main;
     boolean shouldExit = false;
     private boolean animatingBigger = true;
 
     //GUI elements
-    private JLabel selectorScreenTitle, insertMoneyText, moneyCounter;
-    private JButton nutellaKnof, brezVsegaKnof, marmeladaKnof;
-    private JButton okKnof, cancelKnof;
-
-    //Layout managers
-    private FlowLayout flowLayout = new FlowLayout();
-    private BorderLayout borderLayout = new BorderLayout();
+    private SplashPanel splashPanel;
 
     public PancakeGuiFrame(Main main) throws HeadlessException {
         super("PancakeMaker 9000 GUI");
@@ -42,14 +36,11 @@ public class PancakeGuiFrame extends JFrame{
             removeAll();
             switch (screen){
                 case SPLASH:
-                    setLayout(flowLayout);
-                    //add(splashText);
+                    add(splashPanel);
                     break;
                 case INSERT_MONEY:
                     break;
                 case NUTELLA_SELECTOR:
-                    setLayout(borderLayout);
-                    add(selectorScreenTitle, BorderLayout.NORTH);
                     break;
             }
         }
@@ -57,16 +48,9 @@ public class PancakeGuiFrame extends JFrame{
 
     private void addStuff(){
         //Init em all
-        selectorScreenTitle = new JLabel("Izberi namaz");
-        
-        moneyCounter = new JLabel("0.00 €");
-	    insertMoneyText = new JLabel("Vstavi denar");
+        splashPanel = new SplashPanel(this);
 
-        okKnof = new JButton("OK");
-        cancelKnof = new JButton("Cancel");
-        
-        nutellaKnof = new JButton("Nutella");
-        brezVsegaKnof = new JButton("Brez");
-        marmeladaKnof = new JButton("Marmelada");
+        add(splashPanel);
+        pack();
     }
 }
