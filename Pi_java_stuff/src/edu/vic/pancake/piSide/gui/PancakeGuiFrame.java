@@ -19,6 +19,9 @@ public class PancakeGuiFrame extends JFrame{
     private boolean animatingBigger = true;
 
     private JLabel splashText;
+    private JLabel selectorScreenTitle, insertMoneyText, moneyCounter;
+    private JButton nutellaKnof, brezVsegaKnof, marmeladaKnof;
+    private JButton okKnof, cancelKnof;
 
     public PancakeGuiFrame(Main main) throws HeadlessException {
         super("PancakeMaker 9000 GUI");
@@ -48,7 +51,19 @@ public class PancakeGuiFrame extends JFrame{
     }
 
     private void addStuff(){
+        //Init em all
         splashText = new JLabel("PalačinkaMaker 9000");
+        selectorScreenTitle = new JLabel("Izberi namaz");
+        
+        moneyCounter = new JLabel("0.00 €");
+	insertMoneyText = new JLabel("Vstavi denar");
+
+        okKnof = new JButton("OK");
+        cancelKnof = new JButton("Cancel");
+        
+        nutellaKnof = new JButton("Nutella");
+        brezVsegaKnof = new JButton("Brez");
+        marmeladaKnof = new JButton("Marmelada");
         //Check if there is impact font
         String [] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
         String fontName = "Arial";
@@ -66,7 +81,8 @@ public class PancakeGuiFrame extends JFrame{
         if (currentScreen == Screens.SPLASH){
             int fontSize = splashText.getFont().getSize();
             if (animatingBigger){
-                splashText.setOpaque(false);
+                //splashText
+		//Should make text bigger. Don't know how...
             }
             System.out.println("Current animatingBigger: " + animatingBigger);
         }
@@ -91,6 +107,7 @@ public class PancakeGuiFrame extends JFrame{
                     e.printStackTrace();
                 }
             }
+	    System.out.println("GUI animator thread exiting.");
         }
     }
 }
