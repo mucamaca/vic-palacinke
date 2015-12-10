@@ -1,7 +1,8 @@
-void setup(){
-  pinMode(1, OUT);
-}
-
-void loop(){
-  
-}
+#ifndef Arduino_h
+#include <stdio.h>
+void main(){printf("It twerks")};
+#else
+#include ""
+void setup(){};
+void loop(){};
+#endif
