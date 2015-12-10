@@ -29,11 +29,11 @@ const write_t ok = 0, //0000
 void pin_init(){
   char c;
   for(c=22;c<26;c++){
-    //pinMode(c,OUTPUT);
-    //digitalWrite(c,0);  
+    pinMode(c,OUTPUT);
+    digitalWrite(c,0);  
   }
   for(c=26;c<30;c++){
-    //pinMode(c,INPUT);
+    pinMode(c,INPUT);
   }
 }
 
@@ -43,7 +43,7 @@ void comm_write(const write_t value){
   char offset = 0,
 	val = value;
   for(;offset < 4;offset++){
-    //digitalWrite(25 - offset, val % 2);
+    digitalWrite(25 - offset, val % 2);
     val >> 1;
   }
 }
@@ -52,7 +52,7 @@ read_t comm_read(){
   read_t value = 0;
   char offset = 0;
   for(;offset < 4;offset++){
-      //value += digitalRead(29 - offset) * 2 ^ offset;
+      value += digitalRead(29 - offset) * 2 ^ offset;
   }
   return value;
 }
