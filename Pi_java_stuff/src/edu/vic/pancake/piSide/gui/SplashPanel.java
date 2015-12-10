@@ -2,13 +2,15 @@ package edu.vic.pancake.piSide.gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SplashPanel extends JPanel{
     private PancakeGuiFrame frame;
     private JLabel splashText;
     private AnimatorThread animatorThread;
 
-    public SplashPanel(PancakeGuiFrame frame) {
+    public SplashPanel(final PancakeGuiFrame frame) {
         this.frame = frame;
         splashText = new JLabel("PalačinkaMaker 9000");
         animatorThread = new AnimatorThread();
@@ -20,11 +22,18 @@ public class SplashPanel extends JPanel{
             if (s.equals("Impact"))
                 fontName = s;
         }
-        Font splashFont =  new Font(fontName, Font.BOLD, 30);
+        Font splashFont =  new Font(fontName, Font.BOLD, 50);
         splashText.setFont(splashFont);
         splashText.setHorizontalAlignment(SwingConstants.CENTER);
-        setPreferredSize(frame.getSize());
-        add(splashText);
+        setLayout(new BorderLayout());
+        add(splashText, BorderLayout.CENTER);
+
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                frame.changeScreen(PancakeGuiFrame.Screens.INSERT_MONEY);
+            }
+        });
     }
 
     private void update(){

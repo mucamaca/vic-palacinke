@@ -61,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -70,12 +70,14 @@
       <file leaf-file-name="SplashPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/SplashPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59618443">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.6438792">
+              <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1053#1246#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,8 +108,8 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/NotRunningOnPiException.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/Main.java" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/SplashPanel.java" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java" />
       </list>
     </option>
   </component>
@@ -543,7 +545,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449757014189</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Popravljena enkapsulizacija">
+      <created>1449759143332</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1449759143332</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -592,24 +600,12 @@
     <MESSAGE value="Popravk classa NotRunningOnPiException in undo Borovega šarjenja po moji kodi" />
     <MESSAGE value="Pucanje" />
     <MESSAGE value="Encapsulisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Encapsulisation" />
+    <MESSAGE value="Popravljena enkapsulizacija" />
+    <option name="LAST_COMMIT_MESSAGE" value="Popravljena enkapsulizacija" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java</url>
-          <line>53</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -905,19 +901,21 @@
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/PancakeGuiFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/gui/SplashPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59618443">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.6438792">
+          <caret line="33" column="73" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1053#1246#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
           </folding>
         </state>
       </provider>

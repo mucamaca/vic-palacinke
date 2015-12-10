@@ -15,7 +15,6 @@ public class PancakeGuiFrame extends JFrame{
     public Screens currentScreen;
     private Main main;
     boolean shouldExit = false;
-    private boolean animatingBigger = true;
 
     //GUI elements
     private SplashPanel splashPanel;
@@ -23,16 +22,16 @@ public class PancakeGuiFrame extends JFrame{
     public PancakeGuiFrame(Main main) throws HeadlessException {
         super("PancakeMaker 9000 GUI");
         this.main = main;
-        addStuff();
         setLocation(0, 0);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        addStuff();
         setVisible(true);
     }
 
     public void changeScreen(Screens screen){
         if (screen != currentScreen){
-            System.out.println("Changing screen to " + screen);
+            System.out.println("Changing screen to " + screen + ".");
             removeAll();
             switch (screen){
                 case SPLASH:
@@ -51,6 +50,5 @@ public class PancakeGuiFrame extends JFrame{
         splashPanel = new SplashPanel(this);
 
         add(splashPanel);
-        pack();
     }
 }
