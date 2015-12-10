@@ -7,7 +7,7 @@ typedef char write_t;
 const read_t idle,
 	     void_pancake, 
 	     // tuki pridejo ostali okusi (ko si jih bomo zmislili)
-	     err; //1111
+	     err;
 
 const write_t ok,
 	      err_no_mass,
