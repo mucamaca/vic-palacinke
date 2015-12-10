@@ -20,7 +20,7 @@ public class Main implements Runnable{
         try {
             setUpPiStuff();
         }catch (NotRunningOnPiException e) {
-            System.err.println("You aren't running on PI:");
+            System.out.println("You aren't running on PI:");
             e.getCause().printStackTrace();
             runningOnPi = false;
         }

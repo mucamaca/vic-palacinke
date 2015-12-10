@@ -18,6 +18,7 @@ public class PancakeGuiFrame extends JFrame{
 
     //GUI elements
     private SplashPanel splashPanel;
+    private InsertMoneyPanel insertMoneyPanel;
 
     public PancakeGuiFrame(Main main) throws HeadlessException {
         super("PancakeMaker 9000 GUI");
@@ -31,23 +32,28 @@ public class PancakeGuiFrame extends JFrame{
 
     public void changeScreen(Screens screen){
         if (screen != currentScreen){
-            System.out.println("Changing screen to " + screen + ".");
             removeAll();
+            System.out.println("Changing screen to " + screen + ".");
             switch (screen){
                 case SPLASH:
                     add(splashPanel);
+                    System.out.println("switched to splash");
                     break;
                 case INSERT_MONEY:
+                    add(insertMoneyPanel);
+                    System.out.println("switched to insert");
                     break;
                 case NUTELLA_SELECTOR:
                     break;
             }
+            repaint();
         }
     }
 
     private void addStuff(){
         //Init em all
         splashPanel = new SplashPanel(this);
+        insertMoneyPanel = new InsertMoneyPanel(this);
 
         add(splashPanel);
     }
