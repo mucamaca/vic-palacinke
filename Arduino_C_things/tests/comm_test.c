@@ -12,9 +12,18 @@ berejo s stdina in namesto na pine pise na stdout.
 #include <string.h>
 #include <stdio.h>
 
+const char OUT=0;
+const char IN=1;
+
 int c=0;
 char t[1024];
 bool x = false;
+
+char ip=0,
+     op=0;
+char ins[4]={0,0,0,0};
+char outs[4]={0,0,0,0};
+
 
 void pinMode(char pin, char mode){
   if(!x){
@@ -24,6 +33,8 @@ void pinMode(char pin, char mode){
       ++c;
     }while(t[c-1]!=42);
   }
+  if(mode==OUT) outs[op++]=pin;
+  else ins[ip++]=pin;
 }
   
 int digitalRead(char pin){
