@@ -26,7 +26,7 @@ const write_t ok = 0, //0000
 	      err_namaz_not_available = 2;//0010
 	      // itd do 15
 
-void pin_init(){
+void comm_init(){
   char c;
   for(c=22;c<26;c++){
     pinMode(c,OUTPUT);
@@ -36,8 +36,6 @@ void pin_init(){
     pinMode(c,INPUT);
   }
 }
-
-int main(){}; //sam zato, da mi obicni gcc dela, ker je arduino IDE tok zabugan, da nc ne dela in pol pisem kodo v gedit in compilam iz terminala
 
 void comm_write(const write_t value){
   char offset = 0,
