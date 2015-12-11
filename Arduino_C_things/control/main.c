@@ -1,14 +1,17 @@
 // Dummy file za compilat
 
-#ifndef Arduino_h //ce ne laufa na arduinu nardi prazen main in konca
+#include "../communication.h"
+#ifndef Arduino_h //ce ne laufa na arduinu testira z stdinom pa stdoutom
 #include <stdio.h>
 
-void main(){printf("It twerks")};
+void main(){
+  printf("It twerks");
+  cat();
+}
 
-#else // drgac pa nardi prazen setup in loop pa konca
-#include "../communication.h"
+#else // drgac pa nardi setup in loop pa konca
 
-void setup(){};
-void loop(){};
+void setup(){return};
+void loop(){return};
 
 #endif
