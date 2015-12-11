@@ -38,6 +38,16 @@ void pinMode(char pin, char mode){
 }
   
 int digitalRead(char pin){
+  x=false;
+  for(c=0;c<ip;c++){
+       if(ins[c]==pin){
+          x=true;  
+       }
+  }
+  if(!x){
+       printf("ERROR!");
+       return 42;
+  }
   for(c=0;c<=1024;c++){
     if(t[c]==pin){
       return (int) t[c+1];
@@ -46,5 +56,15 @@ int digitalRead(char pin){
 }
 
 void digitalWrite(char pin,char value){
+  x=false;
+  for(c=0;c<op;c++){
+       if(outs[c]==pin){
+          x=true;  
+       }
+  }
+  if(!x){
+       printf("ERROR!");
+       return 42;
+  }     
   printf("%c %c\n",pin,value);
 }
