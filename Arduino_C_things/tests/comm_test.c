@@ -12,13 +12,15 @@ berejo s stdina in namesto na pine pise na stdout.
 #include <string.h>
 #include <stdio.h>
 
+int c=0;
 char t[1024];
 bool x = false;
+
 void pinMode(char pin, char mode){
   if(!x){
     x=true;
     do{
-      scanf("%d",t[c]);
+      scanf("%c ",t[c]);
       ++c;
     }while(t[c-1]!=42);
   }
