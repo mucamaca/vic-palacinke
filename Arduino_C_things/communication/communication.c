@@ -31,6 +31,7 @@ void pin_init(){
   for(c=22;c<26;c++){
     pinMode(c,OUTPUT);
     digitalWrite(c,0);  
+    maca();
   }
   for(c=26;c<30;c++){
     pinMode(c,INPUT);
