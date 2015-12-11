@@ -13,6 +13,8 @@ const write_t ok,
 	      err_no_mass,
 	      err_stuffing_not_available;
 
+void comm_init();
+
 void comm_write(write_t value);
 
 read_t comm_read();
