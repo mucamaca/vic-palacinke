@@ -11,7 +11,7 @@ void main(){
 
 #else // drgac pa nardi setup in loop pa konca
 
-void setup(){return};
-void loop(){return};
+void setup(){};
+void loop(){};
 
 #endif
