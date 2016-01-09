@@ -1,1 +1,2 @@
-*.h -linguist-language=C
+*.h -linguist-language=Arduino
+*.c -linguist-language=Arduino
