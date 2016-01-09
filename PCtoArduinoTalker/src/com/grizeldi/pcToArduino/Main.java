@@ -10,22 +10,59 @@ import java.util.Enumeration;
 
 /**
  * Class for sending stuff to Arduino.
- * Written for Windows.
+ * Written for Windows and Linux. @grizeldi found it not working on Windows.
  * Goes along with the code in arduino testing folder.
+ * Needs java RXTX library.
  */
 public class Main implements Runnable, SerialPortEventListener{
     private SerialPort serialPort;
-    public static final String PORT_NAME = "COM1";
+    public String PORT_NAME;
     public static final int BAUD_RATE = 9600;
 
     private BufferedReader input;
     private OutputStream output;
 
     public static void main(String[] args) {
-        new Main();
+        if (args.length > 0){
+            switch (args [0].toLowerCase()){
+                case "linux":
+                    new Main(OS.LINUX);
+                    break;
+                case "windows":
+                    new Main(OS.WINDOWS);
+                    break;
+                default:
+                    jamalify();
+            }
+        }else {
+            jamalify();
+        }
     }
 
-    public Main() {
+    /**
+     * Used to tell the user that he/she is a Jamal.
+     */
+    private static void jamalify(){
+        System.out.println("Jamal, you is stupid.");
+        System.out.println("You need to pass a windows/linux parameter!");
+    }
+
+    /**
+     * Init happens here.
+     * @param os OS you are running on.
+     */
+    private Main(OS os) {
+        switch (os){
+            case WINDOWS:
+                PORT_NAME = "USB1";
+                break;
+            case LINUX:
+                PORT_NAME = "/dev/ttyUSB0";
+                break;
+            default:
+                return;
+        }
+
         CommPortIdentifier portId = null;
         Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
         //Find the correct port.
@@ -74,6 +111,9 @@ public class Main implements Runnable, SerialPortEventListener{
         }
     }
 
+    /**
+     * Reads from the console and sends to Arduino.
+     */
     @Override
     public void run() {
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
@@ -89,6 +129,11 @@ public class Main implements Runnable, SerialPortEventListener{
         }
     }
 
+    /**
+     * Listener for serial events.
+     * When it receives a data available event, it reads the data and prints it.
+     * @param serialPortEvent We are only interested in data available events.
+     */
     @Override
     public synchronized void serialEvent(SerialPortEvent serialPortEvent) {
         System.out.println("Serial event received: " + serialPortEvent);

@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="RXTXcomm">
     <CLASSES>
-      <root url="jar://D:/Java Libs/mfz-rxtx-2.2-20081207-win-x64/RXTXcomm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../RXTX/RXTXcomm.jar!/" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
-      <root url="file://D:/Java Libs/mfz-rxtx-2.2-20081207-win-x64" />
-      <root url="file://D:/Java Libs/mfz-rxtx-2.2-20081207-win-x64" />
+      <root url="file://$PROJECT_DIR$/../../RXTX/Linux/i686-unknown-linux-gnu" />
+      <root url="file://$PROJECT_DIR$/../../RXTX/Linux/i686-unknown-linux-gnu" />
     </NATIVE>
     <SOURCES />
   </library>

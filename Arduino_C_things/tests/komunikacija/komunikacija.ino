@@ -6,7 +6,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   byte i = Serial.read();
-  if (i != -1){
+  if (i != -1 && i != 255){
     Serial.println("Got a byte: " + String(i));
   }
 }
