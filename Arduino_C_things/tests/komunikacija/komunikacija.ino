@@ -5,7 +5,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int i = Serial.read();
+  byte i = Serial.read();
   if (i != -1){
     Serial.println("Got a byte: " + String(i));
   }
