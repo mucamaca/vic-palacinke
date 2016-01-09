@@ -5,10 +5,7 @@ import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Enumeration;
 
 /**
@@ -18,7 +15,7 @@ import java.util.Enumeration;
  */
 public class Main implements Runnable, SerialPortEventListener{
     private SerialPort serialPort;
-    public static final String PORT_NAME = "COM3";
+    public static final String PORT_NAME = "COM1";
     public static final int BAUD_RATE = 9600;
 
     private BufferedReader input;
@@ -34,6 +31,7 @@ public class Main implements Runnable, SerialPortEventListener{
         //Find the correct port.
         while (portEnum.hasMoreElements()){
             CommPortIdentifier currentPortId = (CommPortIdentifier) portEnum.nextElement();
+            System.out.println("Port name: " + currentPortId.getName());
             if (currentPortId.getName().equals(PORT_NAME)){
                 portId = currentPortId;
             }
@@ -61,15 +59,46 @@ public class Main implements Runnable, SerialPortEventListener{
             return;
         }
         new Thread(this).start();
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                close();
+            }
+        }));
+    }
+
+    public synchronized void close(){
+        if (serialPort != null){
+            serialPort.removeEventListener();
+            serialPort.close();
+        }
     }
 
     @Override
     public void run() {
-
+        BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+        while (true){
+            try {
+                byte in = Byte.parseByte(console.readLine());
+                output.write(in);
+                output.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+        }
     }
 
     @Override
-    public void serialEvent(SerialPortEvent serialPortEvent) {
-
+    public synchronized void serialEvent(SerialPortEvent serialPortEvent) {
+        System.out.println("Serial event received: " + serialPortEvent);
+        if (serialPortEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE){
+            try {
+                String in = input.readLine();
+                System.out.println("Got message from Arduino: " + in);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
