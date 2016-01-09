@@ -9,88 +9,52 @@ import java.awt.*;
  * Ta class sestavi okno za izbiro palačink
  */
 public class PancakeGuiFrame extends JFrame{
-    public static enum Screens {
+    public enum Screens {
         SPLASH, INSERT_MONEY, NUTELLA_SELECTOR;
     }
-    public Screens currentScreen = Screens.SPLASH;
+    public Screens currentScreen;
     private Main main;
-    private boolean shouldExit = false;
-    private AnimatorThread animatorThread;
-    private boolean animatingBigger = true;
+    boolean shouldExit = false;
 
-    private JLabel splashText;
+    //GUI elements
+    private SplashPanel splashPanel;
+    private InsertMoneyPanel insertMoneyPanel;
 
     public PancakeGuiFrame(Main main) throws HeadlessException {
         super("PancakeMaker 9000 GUI");
         this.main = main;
-        addStuff();
-        animatorThread = new AnimatorThread();
         setLocation(0, 0);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        addStuff();
         setVisible(true);
     }
 
     public void changeScreen(Screens screen){
         if (screen != currentScreen){
-            System.out.println("Changing screen to " + screen);
             removeAll();
+            System.out.println("Changing screen to " + screen + ".");
             switch (screen){
                 case SPLASH:
-                    add(splashText);
+                    add(splashPanel);
+                    System.out.println("switched to splash");
                     break;
                 case INSERT_MONEY:
+                    add(insertMoneyPanel);
+                    System.out.println("switched to insert");
                     break;
                 case NUTELLA_SELECTOR:
                     break;
             }
+            repaint();
         }
     }
 
     private void addStuff(){
-        splashText = new JLabel("PalačinkaMaker 9000");
-        //Check if there is impact font
-        String [] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-        String fontName = "Arial";
-        for (String s:fonts){
-            if (s.equals("Impact"))
-                fontName = s;
-        }
-        Font splashFont =  new Font(fontName, Font.BOLD, 30);
-        splashText.setFont(splashFont);
-        splashText.setHorizontalAlignment(SwingConstants.CENTER);
-        add(splashText);
-    }
+        //Init em all
+        splashPanel = new SplashPanel(this);
+        insertMoneyPanel = new InsertMoneyPanel(this);
 
-    private void update(){
-        if (currentScreen == Screens.SPLASH){
-            int fontSize = splashText.getFont().getSize();
-            if (animatingBigger){
-                splashText.setOpaque(false);
-            }
-            System.out.println("Current animatingBigger: " + animatingBigger);
-        }
-        repaint();
-    }
-
-    /**
-     * Ker funkcija update() ne dela, jo bomo klicali sami.
-     */
-    private class AnimatorThread extends Thread{
-        public AnimatorThread() {
-            this.start();
-        }
-
-        @Override
-        public void run() {
-            while (!shouldExit){
-                update();
-                try {
-                    sleep(20);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        add(splashPanel);
     }
 }
