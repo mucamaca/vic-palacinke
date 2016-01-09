@@ -41,6 +41,7 @@ public class Main implements Runnable, SerialPortEventListener{
 
     /**
      * Used to tell the user that he/she is a Jamal.
+     * Nice joke.
      */
     private static void jamalify(){
         System.out.println("Jamal, you is stupid.");
