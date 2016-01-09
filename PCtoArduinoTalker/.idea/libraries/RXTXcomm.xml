@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="RXTXcomm">
+    <CLASSES>
+      <root url="jar://D:/Java Libs/rxtx-2.1-7-bins-r2/RXTXcomm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://D:/Java Libs/rxtx-2.1-7-bins-r2/Windows/i368-mingw32" />
+      <root url="file://D:/Java Libs/rxtx-2.1-7-bins-r2/Windows/i368-mingw32" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/palacinka_pi.iml" filepath="$PROJECT_DIR$/palacinka_pi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PCtoArduinoTalker.iml" filepath="$PROJECT_DIR$/PCtoArduinoTalker.iml" />
     </modules>
   </component>
 </project>
