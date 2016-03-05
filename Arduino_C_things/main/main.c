@@ -6,7 +6,6 @@
 
 void main(){
   printf("It twerks");
-  cat();
 }
 
 #else // drgac pa nardi setup in loop pa konca
