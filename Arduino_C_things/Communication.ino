@@ -1,5 +1,9 @@
-void initComm(){
+int initComm(){
   Serial.begin(9600);
-  //TODO send handshake
+  Serial.write((byte)42);
+  if(Serial.read()!=42)
+    return -1;
+  else
+    return 0;
 }
 
