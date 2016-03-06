@@ -11,5 +11,6 @@
     <orderEntry type="library" name="pi4j-core.jar" level="project" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="RXTX" level="project" />
   </component>
 </module>
