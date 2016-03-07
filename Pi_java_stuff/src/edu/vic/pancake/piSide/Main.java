@@ -36,7 +36,5 @@ public class Main implements Runnable{
             throw new NotRunningOnPiException(e);
         }
         //Če smo kle, pol laufamo na piju
-        ArduinoCommunication.init();
-        communication = ArduinoCommunication.instance;
     }
 }

@@ -3,6 +3,7 @@ package edu.vic.pancake.piSide.gui;
 import edu.vic.pancake.piSide.Main;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.MouseAdapter;
@@ -16,6 +17,7 @@ public class InsertMoneyPanel extends JPanel{
 
     public InsertMoneyPanel(final PancakeGuiFrame frame) {
         this.frame = frame;
+        setLayout(new FlowLayout(FlowLayout.CENTER));
 
         if (Main.runningOnPi){
             System.out.println("Money inserter: Running on Pi, proceed by inserting money.");
@@ -28,15 +30,16 @@ public class InsertMoneyPanel extends JPanel{
 
         add(messageLabel);
         add(insertedMoneyLabel);
+        repaint();
 
-        addMouseListener(new MouseAdapter() {
+        /*addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (!Main.runningOnPi){
                     frame.changeScreen(PancakeGuiFrame.Screens.NUTELLA_SELECTOR);
                 }
             }
-        });
+        });*/
         addComponentListener(new ComponentAdapter() {
             @Override
             public void componentShown(ComponentEvent e) {

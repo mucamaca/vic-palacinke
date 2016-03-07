@@ -4,15 +4,18 @@ import edu.vic.pancake.piSide.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 /**
  * Ta class sestavi okno za izbiro palačink
+ * @author Luka
  */
 public class PancakeGuiFrame extends JFrame{
     public enum Screens {
         SPLASH, INSERT_MONEY, NUTELLA_SELECTOR;
     }
-    public Screens currentScreen;
+    public Screens currentScreen = Screens.SPLASH;
     private Main main;
     boolean shouldExit = false;
 
@@ -33,6 +36,7 @@ public class PancakeGuiFrame extends JFrame{
     public void changeScreen(Screens screen){
         if (screen != currentScreen){
             removeAll();
+            currentScreen = screen;
             System.out.println("Changing screen to " + screen + ".");
             switch (screen){
                 case SPLASH:
@@ -56,5 +60,12 @@ public class PancakeGuiFrame extends JFrame{
         insertMoneyPanel = new InsertMoneyPanel(this);
 
         add(splashPanel);
+    }
+
+    //Java is retarded
+
+    @Override
+    public void removeAll() {
+        getRootPane().getContentPane().removeAll();
     }
 }
