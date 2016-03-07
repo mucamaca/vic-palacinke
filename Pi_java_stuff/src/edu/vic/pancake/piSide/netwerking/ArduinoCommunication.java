@@ -20,6 +20,7 @@ public class ArduinoCommunication {
 
     private static final String PORT = "";
     private static final int BAUD_RATE = 9600;
+    private static boolean upNRunnin = false;
     private static SerialPort serialPort;
 
     static {
@@ -75,6 +76,29 @@ public class ArduinoCommunication {
                 }
             }
         }));
+
+        //Handshake
+        new Thread(new Runnable() {
+            private final byte HANDSHAKE = 42;
+
+            @Override
+            public void run() {
+                try {
+                    while (in.available() < 1){
+                        Thread.sleep(100);
+                    }
+                    if (in.read() == HANDSHAKE){
+                        out.write(HANDSHAKE);
+                        upNRunnin = true;
+                    }else{
+                        throw new IOException("Wrong handshake.");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.exit(-1);
+                }
+            }
+        }).run();
     }
 
     public static boolean addSerialPortListener(SerialPortEventListener listener){
@@ -85,5 +109,9 @@ public class ArduinoCommunication {
             return false;
         }
         return true;
+    }
+
+    public static boolean isOpen(){
+        return upNRunnin;
     }
 }
