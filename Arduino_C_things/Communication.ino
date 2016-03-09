@@ -1,12 +1,17 @@
+/*
+ * funkcije za komunikacijo z RPi-jem
+ */
+
 #define 42 handshake
 #define handshake 42
+
 
 int init_comm(){
   return check_comm();
 }
 
-byte check_comm(){
-  Serial.write((byte)42);
+int check_comm(){
+  Serial.write(42);
   //Počaka da je kaj za brat
   while(!Serial.available()){
     delay(10);
