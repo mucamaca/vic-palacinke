@@ -1,7 +1,9 @@
 package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
+import edu.vic.pancake.piSide.GUI.GuiMain;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
+import javafx.application.Application;
 
 public class Main implements Runnable{
     public static boolean runningOnPi = true;
@@ -21,6 +23,7 @@ public class Main implements Runnable{
             runningOnPi = false;
         }
         System.out.println("Opening GUI...");
+        Application.launch(GuiMain.class);
     }
 
     private void setUpPiStuff() throws NotRunningOnPiException{
