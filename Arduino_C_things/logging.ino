@@ -49,12 +49,15 @@ void warning_write(char *message){
  * za errorje sporoci samo stevilko, opis pa doda java na RPi-ju
  */
  
-void error_write(int errno){
-  Serial.write("Error ");
-  Serial.write(errno/100+'0');
-  Serial.write((errno%100)/10+'0');
-  Serial.write(errno(%10)+'0');
-  Serial.write(':');
+int error_write(int errno){
+  if (errno) {
+    Serial.write("Error ");
+    Serial.write(errno/100+'0');
+    Serial.write((errno%100)/10+'0');
+    Serial.write(errno(%10)+'0');
+    Serial.write(':');
+  }
+  return errno;
 }
 
 
@@ -62,7 +65,10 @@ void error_write(int errno){
  * init-time errorji
  */
  
-void init_error_write(int errno){
-  Serial.write("Init: ");
-  error_write(errno, *message);
+int init_error_write(int errno){
+ if (errno) {
+    Serial.write("Init: ");
+    error_write(errno, *message);
+ }
+ return errno;
 }
