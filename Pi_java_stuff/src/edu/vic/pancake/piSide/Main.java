@@ -1,15 +1,11 @@
 package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
-import edu.vic.pancake.piSide.gui.PancakeGuiFrame;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
-
-import java.io.IOException;
 
 public class Main implements Runnable{
     public static boolean runningOnPi = true;
     public ArduinoCommunication communication;
-    public PancakeGuiFrame frame;
 
     public static void main(String[] args) {
         new Main().run();
@@ -25,8 +21,6 @@ public class Main implements Runnable{
             runningOnPi = false;
         }
         System.out.println("Opening GUI...");
-        frame = new PancakeGuiFrame(this);
-        frame.repaint();
     }
 
     private void setUpPiStuff() throws NotRunningOnPiException{
