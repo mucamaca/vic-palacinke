@@ -31,6 +31,6 @@ void setup() {
 void loop() {
   Serial.flush();
   while (error_write(check_comm())) delay(200); // vsako iteracijo preveri, ce je pi se na zvezi
-  while (error_write(check_sonic())) delay(100);
+  while (warning_write(read_sonic())) delay(100); // preveri, ce ma se dost mase
   // stuff
 }
