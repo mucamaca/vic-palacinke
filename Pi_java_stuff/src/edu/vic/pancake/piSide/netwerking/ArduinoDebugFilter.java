@@ -1,13 +1,12 @@
 package edu.vic.pancake.piSide.netwerking;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class ArduinoDebugFilter extends Thread{
     public static boolean shutDown = false;
 
     static {
-        new ArduinoDebugFilter().run();
+        new ArduinoDebugFilter().start();
     }
 
     @Override
@@ -31,7 +30,7 @@ public class ArduinoDebugFilter extends Thread{
                             }
                         }
                         System.out.println(builder.toString());
-                        //TODO log to file
+                        logToFile(builder.toString());
                     }else {
                         ArduinoCommunication.in.add(b);
                     }
@@ -40,6 +39,16 @@ public class ArduinoDebugFilter extends Thread{
                 System.err.println("Debug filter encountered an error: ");
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void logToFile(String message){
+        File file = new File("Arduino.log");
+        try (FileWriter fOut = new FileWriter(file);
+                PrintWriter out = new PrintWriter(fOut)){
+            out.println(message);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
