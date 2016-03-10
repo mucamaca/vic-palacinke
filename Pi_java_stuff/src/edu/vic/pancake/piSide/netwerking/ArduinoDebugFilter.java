@@ -35,7 +35,7 @@ public class ArduinoDebugFilter extends Thread{
                                     builder.append(c);
                             }
                         }
-                        System.out.println(builder.toString());
+                        System.out.println("[Arduino Debug]" + builder.toString());
                         logToFile(builder.toString());
                     }else {
                         ArduinoCommunication.in.add(b);
@@ -50,7 +50,7 @@ public class ArduinoDebugFilter extends Thread{
 
     private void logToFile(String message){
         File file = new File("Arduino.log");
-        try (FileWriter fOut = new FileWriter(file);
+        try (FileWriter fOut = new FileWriter(file, true);
                 PrintWriter out = new PrintWriter(fOut)){
             out.println(message);
         } catch (IOException e) {
