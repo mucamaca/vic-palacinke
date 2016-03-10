@@ -1,11 +1,15 @@
 package edu.vic.pancake.piSide.netwerking;
 
+import com.sun.jmx.remote.internal.ArrayQueue;
 import gnu.io.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.Buffer;
+import java.nio.ByteBuffer;
 import java.util.Enumeration;
+import java.util.Queue;
 import java.util.TooManyListenersException;
 
 /**
@@ -16,7 +20,8 @@ import java.util.TooManyListenersException;
 
 public class ArduinoCommunication {
     public static OutputStream out;
-    public static InputStream in;
+    public static ArrayQueue<Byte> in;
+    static InputStream inUnfiltered;
 
     private static final String PORT = "";
     private static final int BAUD_RATE = 9600;
@@ -50,7 +55,9 @@ public class ArduinoCommunication {
             //Tukaj dodaj še ostale notify zadeve po potrebi.
 
             out = serialPort.getOutputStream();
-            in = serialPort.getInputStream();
+            inUnfiltered = serialPort.getInputStream();
+
+            in = new ArrayQueue<Byte>(256);
         } catch (PortInUseException e) {
             e.printStackTrace();
             System.exit(-1);
