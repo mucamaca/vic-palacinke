@@ -12,5 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="RXTX" level="project" />
+    <orderEntry type="library" name="RXTXcomm" level="project" />
   </component>
 </module>

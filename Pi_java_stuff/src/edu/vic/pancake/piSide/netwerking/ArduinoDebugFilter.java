@@ -11,6 +11,11 @@ public class ArduinoDebugFilter extends Thread{
 
     @Override
     public void run() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         while (!shutDown){
             try {
                 if (ArduinoCommunication.inUnfiltered.available() > 0){

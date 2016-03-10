@@ -23,7 +23,7 @@ public class ArduinoCommunication {
     public static ArrayQueue<Byte> in;
     static InputStream inUnfiltered;
 
-    private static final String PORT = "";
+    private static final String PORT = "/dev/ttyUSB0";
     private static final int BAUD_RATE = 9600;
     private static boolean upNRunnin = false;
     private static SerialPort serialPort;
@@ -76,9 +76,9 @@ public class ArduinoCommunication {
                     serialPort.removeEventListener();
                     serialPort.close();
                     try {
-                        in.close();
+                        inUnfiltered.close();
                         out.close();
-                    } catch (IOException e) {
+                    } catch (IOException ignored) {
                     }
                 }
             }
@@ -91,10 +91,10 @@ public class ArduinoCommunication {
             @Override
             public void run() {
                 try {
-                    while (in.available() < 1){
+                    while (inUnfiltered.available() < 1){
                         Thread.sleep(100);
                     }
-                    if (in.read() == HANDSHAKE){
+                    if (inUnfiltered.read() == HANDSHAKE){
                         out.write(HANDSHAKE);
                         upNRunnin = true;
                     }else{
