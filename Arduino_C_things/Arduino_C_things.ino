@@ -20,4 +20,6 @@ void loop() {
   // stuff
   write("banananas", false);
   delay(1000);
+  Serial.write(17);
+  Serial.write(103);
 }

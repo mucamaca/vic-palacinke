@@ -25,8 +25,8 @@ public class Main implements Runnable{
             runningOnPi = false;
         }
         System.out.println("Opening GUI...");
-        frame = new PancakeGuiFrame(this);
-        frame.repaint();
+        //frame = new PancakeGuiFrame(this);
+        //frame.repaint();
     }
 
     private void setUpPiStuff() throws NotRunningOnPiException{

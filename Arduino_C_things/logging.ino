@@ -8,15 +8,13 @@
  * za preprosta sporocila v stilu "Segrevam grelce" ali "Palacinka je nared"
  */
  
-void write(String message, bool init){
+void write(const char message[127], bool init){
   Serial.write(127);
-  if(init) Serial.write("Init:");
+  if(init) Serial.write("Init: ");
   Serial.write("Info:");
-  byte i;
-  char chars[256];
-  message.toCharArray(chars, message.length());
-  for (i = 0; i < message.length() + 1; i++){
-    Serial.write(chars[i]);
+  int i;
+  for (i = 0; i < strlen(message); i++){
+    Serial.write(message[i]);
   }
   Serial.write('\n');
 }
@@ -31,7 +29,7 @@ void warning_write(char *message, bool init){
   if(init) Serial.write("Init:");
   Serial.write("Warning:");
   Serial.write(*message);
-  Serial.write('/n');
+  Serial.write('\n');
 }
 
 /*
