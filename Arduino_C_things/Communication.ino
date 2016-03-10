@@ -5,12 +5,12 @@
 #define handshake 42
 
 
-int init_comm(){
+char init_comm(){
   Serial.begin(9600);
   return check_comm();
 }
 
-int check_comm(){
+char check_comm(){
   Serial.write(42);
   //Počaka da je kaj za brat
   while(!Serial.available()){
