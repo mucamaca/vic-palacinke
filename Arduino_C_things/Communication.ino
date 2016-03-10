@@ -2,11 +2,11 @@
  * funkcije za komunikacijo z RPi-jem
  */
 
-#define 42 handshake
 #define handshake 42
 
 
 int init_comm(){
+  Serial.begin(9600);
   return check_comm();
 }
 

@@ -7,6 +7,7 @@ public class ArduinoDebugFilter extends Thread{
 
     static {
         new ArduinoDebugFilter().start();
+        System.out.println("Starting arduino debug filter.");
     }
 
     @Override

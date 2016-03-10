@@ -29,6 +29,7 @@ public class ArduinoCommunication {
     private static SerialPort serialPort;
 
     static {
+        System.out.println("Odpiramo port...");
         //Poišči port
         CommPortIdentifier portId = null;
         Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
@@ -39,7 +40,7 @@ public class ArduinoCommunication {
             }
         }
         //Preveri če smo dejansko našli port
-        if (portId != null){
+        if (portId == null){
             System.err.println("Port " + PORT + " ni najden.");
             System.exit(-1);
         }
