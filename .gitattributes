@@ -1,3 +1,4 @@
-*.h -linguist-language=Arduino
-*.c -linguist-language=Arduino
-*.java -linguist-language=Arduino
+*.h -linguist-language=Java
+*.c -linguist-language=Java
+*.ino -linguist-language=Java
+*.java -linguist-language=Java
