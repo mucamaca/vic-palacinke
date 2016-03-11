@@ -1,4 +1,4 @@
-*.h -linguist-language=Java
-*.c -linguist-language=Java
-*.ino -linguist-language=Java
-*.java -linguist-language=Java
+*.h -linguist-language=Arduino
+*.c -linguist-language=Arduino
+*.ino -linguist-language=Arduino
+*.java -linguist-language=brainfuck
