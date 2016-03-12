@@ -6,8 +6,10 @@
 
 void setup() {
   Serial.begin(9600)
-  while (init_comm()) delay(200); // don't proceed if no RPi connected
-  if ()
+  while (init_comm())  // don't proceed if no RPi connected
+    delay(200);
+  if (!NUMBER_OF_SERVOS)
+    write("NUMBER OF SERVOS is set to zero!!", init = 1, warning = 1);
 }
 
 void loop() {
