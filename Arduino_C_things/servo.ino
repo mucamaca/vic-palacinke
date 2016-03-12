@@ -5,7 +5,7 @@
  
  Servo dosing_servo;
  
-char init_servos(){
+char init_servo(){
   if (NUMBER_OF_SERVOS == 0) {
     write("No servos initialized, because of NUMBER_OF_SERVOS set to 0 in constant.ino", 1, 1);
     return 0;
