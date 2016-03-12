@@ -6,6 +6,8 @@ void setup() {
   Serial.begin(9600)
   while (init_comm())  // don't proceed if no RPi connected
     delay(200);
+
+  // servomotorji
   if (!NUMBER_OF_SERVOS)
     write("NUMBER OF SERVOS is set to zero!!", init = 1, warning = 1);
 }
