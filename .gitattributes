@@ -1,2 +1,2 @@
-*.ino -linguist-language=Blop
+*.ino -linguist-language=Ruby
 *.java -linguist-language=brainfuck
