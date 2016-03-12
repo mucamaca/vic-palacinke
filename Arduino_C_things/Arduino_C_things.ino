@@ -5,7 +5,9 @@
 #define bananas "bananas"
 
 void setup() {
-  while (init_comm()) delay(200); // 
+  Serial.begin(9600)
+  while (init_comm()) delay(200); // don't proceed if no RPi connected
+  if ()
 }
 
 void loop() {
@@ -16,8 +18,4 @@ void loop() {
     // stuff todo if there exists not enough masa
   } 
   // stuff
-  write(banananas, false);
-  delay(1000);
-  Serial.write(17);
-  Serial.write(103);
 }
