@@ -24,7 +24,7 @@ char init_servos(){
 void make_pancake(){
   char state=(char)servo.read();
   dosing_servo.write(state+0/*required value*/);
-  delay(0/*required value*/);
+  delay(0/*required value*/); // some computation will come here
   dosing_servo.write(state);
 }
  
