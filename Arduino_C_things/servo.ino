@@ -12,9 +12,8 @@ char init_servos(){
   }
     
   write("__init__ servo za doziranje", 1, 0);
-  dosing_servo.attach(DOSING_SERVO_PIN);
-  if(!dosing_servo.attached()){
-    return 42; //some to-be-defined nonzero code
+  if (!dosing_servo.attach(DOSING_SERVO_PIN)) {
+    return 42; //some to-be-defined nonzero code manjsi ali enak 63 (ustavi program)
   }
   write("OK", 1, 0);
   
@@ -22,5 +21,10 @@ char init_servos(){
   // other servos.
 }
 
-void 
+void make_pancake(){
+  char state=(char)servo.read();
+  dosing_servo.write(state+0/*required value*/);
+  delay(0/*required value*/);
+  dosing_servo.write(state);
+}
  
