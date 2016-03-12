@@ -2,8 +2,6 @@
  * main file brez main funkcije, ker je arduino IDE retardiran
  */
 
-#define bananas "bananas"
-
 void setup() {
   Serial.begin(9600)
   while (init_comm())  // don't proceed if no RPi connected
