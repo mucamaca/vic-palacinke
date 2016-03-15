@@ -1,7 +1,7 @@
 package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
-import edu.vic.pancake.piSide.GUI.controllers.GUIMain;
+import edu.vic.pancake.piSide.GUI.GUIMain;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
 import javafx.application.Application;
 
