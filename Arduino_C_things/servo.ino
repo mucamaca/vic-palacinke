@@ -1,6 +1,8 @@
 /*
  * File z vsemi funkcijami na servomotorjih, ki jih rabmo.
  */
+ 
+ // Servo library is retarded
 
 char make_pancake(){
   Servo servo;
