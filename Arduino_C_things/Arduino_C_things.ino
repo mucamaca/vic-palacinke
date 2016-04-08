@@ -10,7 +10,7 @@ void setup() {
   
   
   
-  init_servo();// servomotorji
+  //init_servo();// servomotorji
 }
 
 void loop() {
