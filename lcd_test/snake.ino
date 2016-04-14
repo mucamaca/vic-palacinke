@@ -7,6 +7,7 @@ int pos=0;
 char arr[10][2];
 double smer = 0;
 int snake_index=0;
+char snake_len=10;
 #define hitrost 1.5
 
 void arr_init(char *snk int x, int y, char len){
