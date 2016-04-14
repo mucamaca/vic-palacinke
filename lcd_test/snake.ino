@@ -6,23 +6,10 @@ float x=50,y=50;
 int pos=0;
 char arr[10][2];
 double smer = 0;
+int snake_index=0;
 #define hitrost 1.5
 
-void snakeLoop(){
-  //Read input
-  update();
-  render();
-  delay(30);
-}
-
-void draw_snake(char *snk,int len){
-  int i;
-  for(i=pos;i%len<pos;i++){
-    display.drawPixel(snk[i][0],snk[i][1],WHITE);
-  }
-}
-
-void arr_init(char *snk char x, char y, char len){
+void arr_init(char *snk int x, int y, char len){
   int i;
   for(i=0;i<len;i++){
     snk[i][0]=x++;
@@ -34,6 +21,28 @@ void snakeInit(){
   display.initialize();
   arr_init(x,y,10);
 }
+
+void snakeLoop(){
+  //Read input
+  update();
+  render();
+  delay(30);
+}
+
+void update_snake(int * snake, int x, int y){
+  snake[snake_index][0]=x;
+  snake[snake_index][1]=y;
+  snake_index=(snake_index+1)%snake_len;
+}
+  
+void draw_snake(char *snk,int len){
+  int i;
+  for(i=pos;i%len<pos;i++){
+    display.drawPixel(snk[i][0],snk[i][1],WHITE);
+  }
+}
+
+
 
 void update(){
   long raw = analogRead(0) - 512;
