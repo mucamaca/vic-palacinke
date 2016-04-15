@@ -8,17 +8,17 @@ struct piece_of_snake{
   char y;
 };
 
-float x=50,y=50;
-int ldx=0;
-int ldy=1;
-int snake_index=0;
+char x=50,y=50;
+char ldx=0;
+char ldy=1;
+char snake_index=0;
 char snake_len=10;
 struct piece_of_snake snake_arr[10];
 #define hitrost 1.5
 
 void snakeInit(){
   display.initialize();
-  int i;
+  char i;
   for(i=0;i<snake_len*2;i+=2){
     display.drawPixel((char)x,(char)y+i,WHITE);
   }
@@ -32,7 +32,7 @@ void update_snake(struct piece_of_snake *snake, char x, char y){
 }
   
 void draw_snake(struct piece_of_snake *snake, int len){
-  int i=0,n=0;
+  char i=0,n=0;
   while(n++<len){
     if((i+1)%len!=snake_index)
       display.drawLine(snake[i%len].x, snake[i%len].y, snake[(i+1)%len].x, snake[(i+1)%len].y, WHITE);
@@ -42,7 +42,7 @@ void draw_snake(struct piece_of_snake *snake, int len){
 
 void move(){
   char dx=0,dy=0;
-  if(analogRead(5) - 512<100){
+  if(analogRead(5) - 512<-100){
     dx=-1;
     Serial.println("x < 0");
   }
@@ -50,7 +50,7 @@ void move(){
     dx=1;
     Serial.println("x > 0");
   }
-  if(analogRead(4) - 512<100){
+  if(analogRead(4) - 512<-100){
     dy=1;
     Serial.println("y < 0");
   }
@@ -59,9 +59,9 @@ void move(){
     Serial.println("y > 0");
   }
   if(dx&&!dy)
-    x+=3*dx;
+    x+=4*dx;
   else if(dy&&!dx)
-    y+=3*dy;
+    y+=4*dy;
   else if(dy&&dx){
     y+=2*dy;
     x+=2*dx;
@@ -75,13 +75,14 @@ void move(){
 
 void update(){
   move();
+  collision(obst);
   update_snake(snake_arr, (char)x,(char)y);
 }
 
 void render(){
   display.clear();
   draw_snake(snake_arr,snake_len);
-  display.drawPixel((int)x,(int)y,WHITE);
+  display.drawPixel((char)x,(char)y,WHITE);
   display.update();
 }
 
