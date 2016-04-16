@@ -13,6 +13,7 @@ char ldx=0;
 char ldy=1;
 char snake_index=0;
 char snake_len=10;
+struct piece_of_snake *obst=(struct piece_of_snake *)malloc(sizeof(struct_piece_of_snake)*0);
 struct piece_of_snake snake_arr[10];
 #define hitrost 1.5
 
@@ -31,7 +32,7 @@ void update_snake(struct piece_of_snake *snake, char x, char y){
   snake_index=(snake_index+1)%snake_len;
 }
   
-void draw_snake(struct piece_of_snake *snake, int len){
+void draw_snake(struct piece_of_snake *snake, char len){
   char i=0,n=0;
   while(n++<len){
     if((i+1)%len!=snake_index)
@@ -73,9 +74,13 @@ void move(){
   ldy=dy;
 }
 
+void collision(struct piece_of_snake *obstacles, struct piece_of_snake *snake, char len){
+  return;
+}
+
 void update(){
   move();
-  collision(obst);
+  collision(obst, snake_arr, snake_len);
   update_snake(snake_arr, (char)x,(char)y);
 }
 
