@@ -1,13 +1,13 @@
 #include <Adafruit_ssd1306syp.h>
-#define SDA_PIN 3
-#define SCL_PIN 2
+#define SDA_PIN 13
+#define SCL_PIN 12
 Adafruit_ssd1306syp display(SDA_PIN,SCL_PIN);
 
 struct piece_of_snake{
   char x;
   char y;
 };
-
+int ranx=120,rany=43;
 char x=50,y=50;
 char ldx=0;
 char ldy=1;
@@ -77,6 +77,7 @@ void move(){
     ldx=dx;
     ldy=dy;
   }
+  
   //popravi tole, da se ne bo dalo ful ostro zavijat
 }
 
@@ -85,9 +86,12 @@ void collision(struct piece_of_snake *obstacles, char obstacle_len, struct piece
   bool t;
   for(i=0;i<obstacle_len;i++){
     if(x==obstacles[i].x && y==obstacles[i].y){
-      end_game(snake_len);
-      free(obstacles);
-      free(snake);
+      Serial.println("You shall end now!");
+    }
+  }
+  for(i=0;i<snake_len;i++){
+    if(x==snake[i].x && y==snake[i].y){
+      Serial.println("You shall end now!");
     }
   }
 }
@@ -101,12 +105,13 @@ void end_game(char score){
     draw_snake(snake_arr, score);
     delay(100);
   }
-  display.println("Game over!");
+  display.println("");
 }
-
+void eat(){};
 void update(){
   move();
-  //collision(obst, obstacle_len, snake_arr, snake_len);
+  collision(obst, obstacle_len, snake_arr, snake_len);
+  eat();
   update_snake(snake_arr, (char)x,(char)y);
 }
 
