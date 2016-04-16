@@ -13,15 +13,16 @@ char ldx=0;
 char ldy=1;
 char snake_index=0;
 char snake_len=10;
-struct piece_of_snake *obst=(struct piece_of_snake *)malloc(sizeof(struct_piece_of_snake)*0);
+char obstacle_len=0;
+struct piece_of_snake *obst=(struct piece_of_snake *)malloc(sizeof(struct piece_of_snake)*0);
 struct piece_of_snake snake_arr[10];
 #define hitrost 1.5
 
 void snakeInit(){
   display.initialize();
   char i;
-  for(i=0;i<snake_len*2;i+=2){
-    display.drawPixel((char)x,(char)y+i,WHITE);
+  for(i=1;i<snake_len*4;i+=4){
+    display.drawPixel(x, y+i, WHITE);
   }
 }
 
@@ -59,6 +60,7 @@ void move(){
     dy=-1;
     Serial.println("y > 0");
   }
+  bool mov=1;
   if(dx&&!dy)
     x+=4*dx;
   else if(dy&&!dx)
@@ -67,20 +69,44 @@ void move(){
     y+=2*dy;
     x+=2*dx;
   }else{
-    x+=ldx;
-    y+=ldy;
+    x+=2*ldx;
+    y+=2*ldy;
+    mov=0;
   }
-  ldx=dx;
-  ldy=dy;
+  if(mov){
+    ldx=dx;
+    ldy=dy;
+  }
+  //popravi tole, da se ne bo dalo ful ostro zavijat
 }
 
-void collision(struct piece_of_snake *obstacles, struct piece_of_snake *snake, char len){
-  return;
+void collision(struct piece_of_snake *obstacles, char obstacle_len, struct piece_of_snake *snake, char snake_len){
+  char i;
+  bool t;
+  for(i=0;i<obstacle_len;i++){
+    if(x==obstacles[i].x && y==obstacles[i].y){
+      end_game(snake_len);
+      free(obstacles);
+      free(snake);
+    }
+  }
+}
+
+void end_game(char score){
+  char i;
+  delay(200);
+  for(i=0;i<5;i++){
+    display.clear();
+    delay(100);
+    draw_snake(snake_arr, score);
+    delay(100);
+  }
+  display.println("Game over!");
 }
 
 void update(){
   move();
-  collision(obst, snake_arr, snake_len);
+  //collision(obst, obstacle_len, snake_arr, snake_len);
   update_snake(snake_arr, (char)x,(char)y);
 }
 

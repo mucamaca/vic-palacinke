@@ -1,12 +1,14 @@
+#include <max6675.h>
+
 /*
  * main file brez main funkcije, ker je arduino IDE retardiran
  */
 
 void setup() {
   Serial.begin(9600)
-  while (init_comm())  // don't proceed if no RPi connected
+  //while (init_comm())  // don't proceed if no RPi connected
     delay(200);
-  write("Connected", init=1, warning=0);
+  //write("Connected", init=1, warning=0);
   
   
   
