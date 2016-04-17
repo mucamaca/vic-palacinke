@@ -6,21 +6,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class GUIMain extends Application {
-    public static GUIMain guiMain;
+public class GuiMain extends Application{
+    public static final int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450;
 
     Stage stage;
-    Scene splashScene;
+    Scene splashScene, insertMoneyScene;
+    public static GuiMain guiMain;
 
-    public GUIMain() {
+    public GuiMain() {
         guiMain = this;
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent fxml = FXMLLoader.load(getClass().getResource("res/splash_screen.fxml"));
+        Parent splashFxml = FXMLLoader.load(getClass().getResource("res/splash_screen.fxml"));
+        Parent insertMoneyFxml = FXMLLoader.load(getClass().getResource("res/insert_money_screen.fxml"));
 
-        splashScene = new Scene(fxml, 800, 450);
+        splashScene = new Scene(splashFxml, SCREEN_WIDTH, SCREEN_HEIGHT);
+        insertMoneyScene = new Scene(insertMoneyFxml, SCREEN_WIDTH, SCREEN_HEIGHT);
 
         stage = primaryStage;
         stage.setTitle("PfankuchenMacher9000 GUI");
@@ -28,7 +31,12 @@ public class GUIMain extends Application {
         stage.show();
     }
 
-    public void switchScreen(){
+    public void switchScreen(Screens screen){
         System.out.println("Switch screen called.");
+        switch (screen){
+            case INSERT_MONEY:
+                stage.setScene(insertMoneyScene);
+                break;
+        }
     }
 }
