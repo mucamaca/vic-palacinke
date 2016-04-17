@@ -11,17 +11,16 @@ struct piece{
 struct snake_t{
   char x;
   char y;
-  char ldx;
-  char ldy;
+  signed char ldx;
+  signed char ldy;
   char index;
   char len;
   struct piece *arr;
 };
-
-long ranx = 120, rany = 43;
-struct snake_t *snake;
-char obstacle_len = 0;
-struct piece *obst;
+//pivovarna lasko
+static char obstacle_len = 0;
+static struct snake_t *snake;
+static struct piece *obst;
 
 
 void update_snake(){
@@ -32,7 +31,7 @@ void update_snake(){
   
 
 void move(){
-  char dx = 0,dy = 0;
+  signed char dx = 0,dy = 0;
   if(analogRead(5) - 512 < -100){
     dx = -1;
   }
@@ -104,10 +103,21 @@ void render(){
   display.update();
 }
 
+void snake_init(){
+  snake->x = 50;
+  snake->y = 50;
+  snake->ldx = 0;
+  snake->ldy = -1;
+  snake->index = 0;
+  snake->len = 5;
+}
+
 void setup(){
   display.initialize();
   snake=(struct snake_t *)malloc(sizeof(struct snake_t));
-  //snake_init(snake);
+  if(snake==null)
+    //goto menu;
+  snake_init();
   char i;
   for(i = 1; i < snake->len * 4; i += 4){
     display.drawPixel(snake->x, snake->y + i, WHITE);
@@ -115,7 +125,6 @@ void setup(){
 }
 
 void loop(){
-  
   update();
   render();
 }
