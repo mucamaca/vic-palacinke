@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a45ea12-eda6-4449-8f5b-de2247cbc9de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
+    <list default="true" id="3a45ea12-eda6-4449-8f5b-de2247cbc9de" name="Default" comment="Implemented">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/InsertMoneyController.java" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/InsertMoneyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java" />
     </list>
     <ignored path="Palačinka Pi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,15 +27,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GuiMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GuiMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.027960526">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SauceSelectorController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SauceSelectorController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0065789">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -143,16 +142,16 @@
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/Main.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/splash_screen.fxml" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUIMain.java" />
-        <option value="$PROJECT_DIR$/../.gitignore" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/Screens.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GUIMain.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/insert_money_screen.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/ScreenListener.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SplashController.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/InsertMoneyController.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java" />
+        <option value="$PROJECT_DIR$/../.gitignore" />
       </list>
     </option>
   </component>
@@ -817,7 +816,7 @@
       <workItem from="1458761272196" duration="241000" />
       <workItem from="1460882886301" duration="306000" />
       <workItem from="1460883350453" duration="131000" />
-      <workItem from="1460883501952" duration="3246000" />
+      <workItem from="1460883501952" duration="3489000" />
     </task>
     <task id="LOCAL-00001" summary="Popravk readme.md, da se res ne bo dal zgrešit da se ne sme odpirat brez idee">
       <created>1449505874196</created>
@@ -903,11 +902,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460885845269</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added sauce selector stuff WIP">
+      <created>1460886768182</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1460886768183</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14272000" />
+    <option name="totallyTimeSpent" value="14515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -968,7 +973,8 @@
     <MESSAGE value="Dodan insert money screen&#10;" />
     <MESSAGE value="Refactor ker je git smotan" />
     <MESSAGE value="Workaround for JFX not providing onShown events" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workaround for JFX not providing onShown events" />
+    <MESSAGE value="Added sauce selector stuff WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sauce selector stuff WIP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1007,8 +1013,8 @@
           <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1038,8 +1044,8 @@
           <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1290,14 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/netwerking/ArduinoCommunication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.073993474">
@@ -1319,18 +1317,6 @@
         <state vertical-scroll-proportion="0.55921054">
           <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1409,7 +1395,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0065789">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1421,6 +1407,26 @@
             <element signature="e#885#886#0" expanded="true" />
             <element signature="e#944#945#0" expanded="true" />
             <element signature="e#978#979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05592105">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027960526">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
           </folding>
         </state>
       </provider>
