@@ -1,7 +1,7 @@
 package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
-import edu.vic.pancake.piSide.GUI.GUIMain;
+import edu.vic.pancake.piSide.GUI.GuiMain;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
 import javafx.application.Application; //TODO MUCAMACA
 
@@ -23,7 +23,7 @@ public class Main implements Runnable{
             runningOnPi = false;
         }
         System.out.println("Opening GUI...");
-        Application.launch(GUIMain.class);
+        Application.launch(GuiMain.class);
     }
 
     private void setUpPiStuff() throws NotRunningOnPiException{

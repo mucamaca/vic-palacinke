@@ -1,0 +1,6 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER" fx:controller="edu.vic.pancake.piSide.GUI.controllers.InsertMoneyController">
+    <Text text="VSTAVI KEŠ"/>
+</FlowPane>

@@ -1,7 +1,7 @@
 package edu.vic.pancake.piSide.GUI.controllers;
 
 /**
- * Created by Luka on 17.4.2016.
+ * A class that checks if enough money has been inserted.
  */
 public class InsertMoneyController {
 }
