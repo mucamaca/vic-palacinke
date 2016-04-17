@@ -12,9 +12,14 @@ public class InsertMoneyController implements Runnable, ScreenListener{
         GuiMain.controllers.put("InsertMoney", this);
     }
 
+    private void onAllMoneyInserted(){
+
+    }
+
     @Override
     public void run() {
-
+        //Listen to money inserter, when ok, call onAllMoney and return
+        onAllMoneyInserted();
     }
 
     @Override
