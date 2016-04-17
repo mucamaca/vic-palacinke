@@ -1,14 +1,6 @@
-// this example is public domain. enjoy!
-// www.ladyada.net/learn/sensors/thermocouple
-
 #include "max6675.h"
 
-int thermoDO = 3;
-int thermoCS = 4;
-int thermoCLK = 5;
-int tmp[10];
-
-MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
+MAX6675 thermocouple(THERMO_CLK_PIN, THERMO_CS_PIN, THERMO_DO_PIN);
   
 char grelci_setup(){
   pinMode(TERMO_VCC_PIN, OUTPUT);
@@ -23,7 +15,7 @@ char grelci_setup(){
   else
     return 0;
 }
-// med dvema klicema te funkcoije mora bit vsaj 800ms
+// med dvema klicema te funkcije mora bit vsaj 800ms
 char grelci() {
   int t;
   t=(int)thermocouple.readCelsius();
