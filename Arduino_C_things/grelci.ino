@@ -1,8 +1,8 @@
 #include "max6675.h"
 
-MAX6675 thermocouple(THERMO_CLK_PIN, THERMO_CS_PIN, THERMO_DO_PIN);
+static MAX6675 thermocouple(THERMO_CLK_PIN, THERMO_CS_PIN, THERMO_DO_PIN);
   
-char grelci_setup(){
+char grelci_init(){
   pinMode(TERMO_VCC_PIN, OUTPUT);
   pinMode(TERMO_GND_PIN, OUTPUT);  
   digitalWrite(TERMO_VCC_PIN, HIGH);
@@ -15,7 +15,7 @@ char grelci_setup(){
   else
     return 0;
 }
-// med dvema klicema te funkcije mora bit vsaj 800ms
+// med dvema klicema te funkcije mora bit vsaj 900ms
 char grelci() {
   int t;
   t=(int)thermocouple.readCelsius();
