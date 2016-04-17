@@ -13,7 +13,7 @@ public class GuiMain extends Application{
     public static final int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450;
 
     Stage stage;
-    Scene splashScene, insertMoneyScene, selectSauceScene;
+    public Scene splashScene, insertMoneyScene, selectSauceScene;
     public static GuiMain guiMain;
     public static Map<String, ScreenListener> controllers = new HashMap<>();
 

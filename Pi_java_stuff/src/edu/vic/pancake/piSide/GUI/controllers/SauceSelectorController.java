@@ -19,6 +19,7 @@ public class SauceSelectorController implements ScreenListener{
     public void onScreenSwitched(Screens screen) {
         if (screen == Screens.SELECT_SAUCE){
             //Do shit
+            System.out.println("Sauce selector created");
         }
     }
 
