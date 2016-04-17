@@ -6,12 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GuiMain extends Application{
     public static final int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450;
 
     Stage stage;
     Scene splashScene, insertMoneyScene;
     public static GuiMain guiMain;
+    public static Map<String, ScreenListener> controllers = new HashMap<>();
 
     public GuiMain() {
         guiMain = this;
