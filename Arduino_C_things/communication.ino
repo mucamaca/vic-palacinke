@@ -21,3 +21,5 @@ char check_comm(){
   else
     return 0;
 }
+
+#undef HANDSHAKE 
