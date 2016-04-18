@@ -1,2 +1,3 @@
 *.ino -linguist-language=Arduino
 *.h -linguist-language=Arduino
+*.xml -linguist-language=Arduino
