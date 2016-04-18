@@ -5,15 +5,22 @@
  * Naj samo spomnim, da na pinih 0 in 1 ne sme bit nic zaradi seriala.
  */
 
-#define DOSING_SERVO_PIN 10
-
-
 // grelci-stuff
-#define THERMO_VCC 
-#define THERMO_GND
-#define THERMO_CLK
-#define THERMO_CS
-#define THERMO_DO
+#define SPODNJI_THERMO_VCC 
+#define SPODNJI_THERMO_GND
+#define SPODNJI_THERMO_CLK
+#define SPODNJI_THERMO_CS
+#define SPODNJI_THERMO_DO
+
+#define ZGORNJI_THERMO_VCC 
+#define ZGORNJI_THERMO_GND
+#define ZGORNJI_THERMO_CLK
+#define ZGORNJI_THERMO_CS
+#define ZGORNJI_THERMO_DO
+
+
+#define TARGET_TEMP
+
 
 #define SPODNJI_GRELEC
 #define ZGORNJI_GRELEC
