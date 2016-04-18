@@ -21,6 +21,7 @@ struct snake_t{
 static char obstacle_len = 0;
 static struct snake_t *snake;
 static struct piece *obst;
+static struct piece food;
 
 
 void update_snake(){
@@ -66,7 +67,12 @@ void move(){
 }
 
 void collision(){};
-void eat(){};
+void eat(){
+  if(snake->x == food.x && snake->y == food.y){
+    snake->len++;
+    score++;
+  }
+}
 
 void update(){
   move();
@@ -100,14 +106,15 @@ void render(){
   display.clear();
   draw_snake();
   display.drawPixel(snake->x, snake->y, WHITE);
+  display.drawPixel(food.x, food.y, WHITE);
   display.update();
 }
 
 void snake_init(){
   snake->len = 5;
   snake->arr = (struct piece *)malloc(sizeof(struct piece) * snake->len);
-  if(snake == NULL){
-    }
+  if(snake->arr == NULL)
+    exit(1);
   snake->x = 50;
   snake->y = 50;
   snake->ldx = 0;
@@ -117,15 +124,22 @@ void snake_init(){
 
 void setup(){
   delay(1000);
+  Serial.begin(9600);
   display.initialize();
   snake=(struct snake_t *)malloc(sizeof(struct snake_t));
-  if(snake==NULL);
-    //goto menu;
+  if(snake == NULL ){
+    Serial.println("you retard!");
+    exit(1); // to je temporary. drgac ne bo kr koncal programa zarad null pointerja
+  }
   snake_init();
-  serial.prinln()
+
+  randomSeed(micros()+(int)analogRead(4));
+  food.x=42;
+  food.y=42;
+  //Serial.println("meow. im here");
   char i;
   for(i = 1; i < snake->len * 4; i += 4){
-    display.drawPixel(snake->x, snake->y + i, WHITE);
+    display.drawLine(snake->x, snake->y + i, snake->x, snake->y + i + 4, WHITE);
   }
 }
 
