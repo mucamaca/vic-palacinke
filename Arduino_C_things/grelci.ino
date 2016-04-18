@@ -1,4 +1,10 @@
+/* 
+ * File s funkcijami za uravnavanje temperature grelcev. 
+ * 
+ */
+
 #include "max6675.h"
+
 
 static MAX6675 spodnji_thermocouple(SPODNJI_THERMO_CLK, SPODNJI_THERMO_CS, SPODNJI_THERMO_DO);
 static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORNJI_THERMO_DO);

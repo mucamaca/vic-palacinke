@@ -2,8 +2,8 @@
  * funkcije za komunikacijo z RPi-jem
  */
 
-#define handshake 42
 
+#define HANDSHAKE 42
 
 char init_comm(){
   Serial.begin(9600);
@@ -11,12 +11,12 @@ char init_comm(){
 }
 
 char check_comm(){
-  Serial.write(42);
+  Serial.write(HANDSHAKE);
   //Počaka da je kaj za brat
   while(!Serial.available()){
     delay(10);
   }
-  if(Serial.read()!=42)
+  if(Serial.read() != HANDSHAKE)
     return 42;
   else
     return 0;
