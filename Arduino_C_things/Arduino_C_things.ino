@@ -1,5 +1,5 @@
 /*
- * main file brez main funkcije, ker je arduino IDE retardiran
+ * main file brez main funkcije, ker je arduino IDE/language retardiran
  */
 
 void setup(){
