@@ -17,7 +17,7 @@ struct snake_t{
   char len;
   struct piece *arr;
 };
-//pivovarna lasko
+
 static char obstacle_len = 0;
 static struct snake_t *snake;
 static struct piece *obst;
@@ -93,7 +93,7 @@ void end_game(){
   }
   free(snake);
   free(obst);
-  //goto menu;
+  exit(0);
 }
 
 void render(){
@@ -104,20 +104,25 @@ void render(){
 }
 
 void snake_init(){
+  snake->len = 5;
+  snake->arr = (struct piece *)malloc(sizeof(struct piece) * snake->len);
+  if(snake == NULL){
+    }
   snake->x = 50;
   snake->y = 50;
   snake->ldx = 0;
   snake->ldy = -1;
   snake->index = 0;
-  snake->len = 5;
 }
 
 void setup(){
+  delay(1000);
   display.initialize();
   snake=(struct snake_t *)malloc(sizeof(struct snake_t));
-  if(snake==null)
+  if(snake==NULL);
     //goto menu;
   snake_init();
+  serial.prinln()
   char i;
   for(i = 1; i < snake->len * 4; i += 4){
     display.drawPixel(snake->x, snake->y + i, WHITE);
@@ -128,4 +133,6 @@ void loop(){
   update();
   render();
 }
+
+
 
