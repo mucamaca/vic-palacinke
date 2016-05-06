@@ -11,18 +11,18 @@ static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORN
 
 //TODO dodaj vsega kopijo se za tadrugi grelc.
 char grelci_init(){
-  pinMode(SPODNJI_TERMO_VCC, OUTPUT);
-  pinMode(SPODNJI_TERMO_GND, OUTPUT);  
-  digitalWrite(SPODNJI_TERMO_VCC, HIGH);
-  digitalWrite(SPODNJI_TERMO_GND, LOW);
+  pinMode(SPODNJI_THERMO_VCC, OUTPUT);
+  pinMode(SPODNJI_THERMO_GND, OUTPUT);  
+  digitalWrite(SPODNJI_THERMO_VCC, HIGH);
+  digitalWrite(SPODNJI_THERMO_GND, LOW);
   
-  pinMode(ZGORNJI_TERMO_VCC, OUTPUT);
-  pinMode(ZGORNJI_TERMO_GND, OUTPUT);  
-  digitalWrite(ZGORNJI_TERMO_VCC, HIGH);
-  digitalWrite(ZGORNJI_TERMO_GND, LOW);
+  pinMode(ZGORNJI_THERMO_VCC, OUTPUT);
+  pinMode(ZGORNJI_THERMO_GND, OUTPUT);  
+  digitalWrite(ZGORNJI_THERMO_VCC, HIGH);
+  digitalWrite(ZGORNJI_THERMO_GND, LOW);
   
-  pinMode(GRELEC_SPODNJI, OUTPUT);
-  pinMode(GRELEC_ZGORNJI, OUTPUT);
+  pinMode(SPODNJI_GRELEC, OUTPUT);
+  pinMode(ZGORNJI_GRELEC, OUTPUT);
   
   delay(1000);
   if(spodnji_thermocouple.readCelsius() == nan || zgornji_thermocouple.readCelsius() == nan)
