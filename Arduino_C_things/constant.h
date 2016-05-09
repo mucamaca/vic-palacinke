@@ -25,4 +25,5 @@
 #define SPODNJI_GRELEC 
 #define ZGORNJI_GRELEC
 
-// add other stuff here
+//masa-things
+#define MASA_PER_PANCAKE 3

@@ -4,7 +4,6 @@
  * Trenutno ga je ful velik.
  */
 
-// meow
 char check_masa(){
   return 0;
 }

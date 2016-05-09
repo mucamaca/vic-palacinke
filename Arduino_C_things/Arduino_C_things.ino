@@ -1,6 +1,8 @@
 /*
  * main file brez main funkcije, ker je arduino IDE/language retardiran
  */
+int pancake_steps [3];
+bool should_dispense = true;
 
 void setup(){
   //while (init_comm())  // don't proceed if no RPi connected
@@ -11,10 +13,9 @@ void setup(){
 }
 
 void loop(){
-  //while (error_write(check_comm())) delay(400); // vsako iteracijo preveri, ce je pi se na zvezi
-  //while (error_write(check_masa())) {
-    delay(900);
+  if (should_dispense && check_masa() >= MASA_PER_PANCAKE){
+    should_dispense = false;
+  }
+  delay(900);
   grelci();
-    // stuff todo if there exists not enough masa 
-  // stuff
 }
