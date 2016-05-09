@@ -6,23 +6,22 @@
 #include <max6675.h>
 
 
-MAX6675 spodnji_thermocouple(SPODNJI_THERMO_CLK, SPODNJI_THERMO_CS, SPODNJI_THERMO_DO);
-//static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORNJI_THERMO_DO);
+static MAX6675 spodnji_thermocouple(SPODNJI_THERMO_CLK, SPODNJI_THERMO_CS, SPODNJI_THERMO_DO);
+static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORNJI_THERMO_DO);
 
-//TODO dodaj vsega kopijo se za tadrugi grelc.
 char grelci_init(){
   pinMode(SPODNJI_THERMO_VCC, OUTPUT);
   pinMode(SPODNJI_THERMO_GND, OUTPUT);  
   digitalWrite(SPODNJI_THERMO_VCC, HIGH);
   digitalWrite(SPODNJI_THERMO_GND, LOW);
   
-  //pinMode(ZGORNJI_THERMO_VCC, OUTPUT);
-  //pinMode(ZGORNJI_THERMO_GND, OUTPUT);  
-  //digitalWrite(ZGORNJI_THERMO_VCC, HIGH);
-  //digitalWrite(ZGORNJI_THERMO_GND, LOW);
+  pinMode(ZGORNJI_THERMO_VCC, OUTPUT);
+  pinMode(ZGORNJI_THERMO_GND, OUTPUT);  
+  digitalWrite(ZGORNJI_THERMO_VCC, HIGH);
+  digitalWrite(ZGORNJI_THERMO_GND, LOW);
   
-  //pinMode(SPODNJI_GRELEC, OUTPUT);
-  //pinMode(ZGORNJI_GRELEC, OUTPUT);
+  pinMode(SPODNJI_GRELEC, OUTPUT);
+  pinMode(ZGORNJI_GRELEC, OUTPUT);
   
   delay(1000);
  /* if(spodnji_thermocouple.readCelsius() == ) //|| zgornji_thermocouple.readCelsius() == nan)
@@ -35,8 +34,8 @@ char grelci_init(){
 // med dvema klicema te funkcije mora bit vsaj 900ms
 char grelci(){
   int t_spodnji = (int)spodnji_thermocouple.readCelsius();
-  //int t_zgornji = (int)zgornji_thermocouple.readCelsius();
-  /*
+  int t_zgornji = (int)zgornji_thermocouple.readCelsius();
+
   if(t_spodnji > TARGET_TEMP)
     digitalWrite(SPODNJI_GRELEC, 0);
   else
@@ -46,6 +45,8 @@ char grelci(){
     digitalWrite(ZGORNJI_GRELEC, 0);
   else
     digitalWrite(ZGORNJI_GRELEC,1);
+  Serial.println(t_spodnji);
+  Serial.println(t_zgornji);
+  Serial.print("\n\n\n");
   return 0;
-  */
 }

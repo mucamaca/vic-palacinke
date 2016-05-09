@@ -12,24 +12,21 @@
 #define SPODNJI_THERMO_CS 49
 #define SPODNJI_THERMO_DO 47
 
-#define ZGORNJI_THERMO_VCC 
-#define ZGORNJI_THERMO_GND
-#define ZGORNJI_THERMO_CLK
-#define ZGORNJI_THERMO_CS
-#define ZGORNJI_THERMO_DO
+#define ZGORNJI_THERMO_VCC  25
+#define ZGORNJI_THERMO_GND 23
+#define ZGORNJI_THERMO_CLK 31
+#define ZGORNJI_THERMO_CS 29
+#define ZGORNJI_THERMO_DO 27
 
 
-#define TARGET_TEMP 12
+#define TARGET_TEMP 120
 
 
-#define SPODNJI_GRELEC 
-#define ZGORNJI_GRELEC
+#define SPODNJI_GRELEC 2
+#define ZGORNJI_GRELEC 3
 
 //masa-things
-<<<<<<< HEAD
-#define MASA_PER_PANCAK E 3
 #define STEVILO_PALACINK 3
-=======
 #define MASA_PER_PANCAKE 3
 
 // stepper-things
@@ -37,4 +34,4 @@
 #define TRAK_PUL_MINUS
 #define TRAK_DIR_PLUS
 #define TRAK_DIR_MINUS
->>>>>>> 5f181189c8d853ca161a78208fd9fe50921cb53c
+
