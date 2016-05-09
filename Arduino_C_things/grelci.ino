@@ -3,7 +3,7 @@
  * 
  */
 
-#include "max6675.h"
+#include <max6675.h>
 
 
 MAX6675 spodnji_thermocouple(SPODNJI_THERMO_CLK, SPODNJI_THERMO_CS, SPODNJI_THERMO_DO);

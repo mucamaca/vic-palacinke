@@ -9,6 +9,7 @@ char check_masa(){
 }
 
 void dispense_pancake(){
-  //TODO
+  static char pancake_index = 0;
+  
 }
 

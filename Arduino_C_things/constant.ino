@@ -26,4 +26,5 @@
 #define ZGORNJI_GRELEC
 
 //masa-things
-#define MASA_PER_PANCAKE 3
+#define MASA_PER_PANCAK E 3
+#define STEVILO_PALACINK 3
