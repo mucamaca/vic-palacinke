@@ -1,4 +1,4 @@
-/*
+/**
  * funkcije za komunikacijo z RPi-jem
  */
 

@@ -1,4 +1,4 @@
-/*
+/**
  * File z logging funkcijami za sporocanje debuging sporocil v logfile na RPi-ju
  */
 

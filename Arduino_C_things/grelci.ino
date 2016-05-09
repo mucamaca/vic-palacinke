@@ -1,6 +1,5 @@
 /**
  * File s funkcijami za uravnavanje temperature grelcev. 
- * 
  */
 
 #include <max6675.h>
@@ -39,14 +38,11 @@ char grelci(){
   if(t_spodnji > TARGET_TEMP)
     digitalWrite(SPODNJI_GRELEC, 0);
   else
-    digitalWrite(SPODNJI_GRELEC,1);
+    digitalWrite(SPODNJI_GRELEC, 1);
     
   if(t_zgornji > TARGET_TEMP)
     digitalWrite(ZGORNJI_GRELEC, 0);
   else
-    digitalWrite(ZGORNJI_GRELEC,1);
-  Serial.println(t_spodnji);
-  Serial.println(t_zgornji);
-  Serial.print("\n\n\n");
+    digitalWrite(ZGORNJI_GRELEC, 1);
   return 0;
 }
