@@ -6,7 +6,7 @@ bool should_dispense = true;
 
 void setup(){
   //while (init_comm())  // don't proceed if no RPi connected
-    delay(200);
+  delay(200);
   Serial.begin(9600);
   Serial.println(grelci_init());
   //write("Connected", init=1, warning=0);
@@ -21,6 +21,8 @@ void loop(){
   }
   delay(900);
   grelci();
+  //Move stepper
+  steper.obrni(3);
 }
 
 void clean_array(){
