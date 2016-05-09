@@ -8,7 +8,7 @@ void write(const char message[127], bool init, bool warning){
   if(init)
     Serial.write("[Init]");
   if(warning)
-    Serial.write("[Warning]:")
+    Serial.write("[Warning]:");
   else
     Serial.write("[Info]:");
   int i;

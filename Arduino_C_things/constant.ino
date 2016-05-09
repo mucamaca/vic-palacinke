@@ -6,11 +6,11 @@
  */
 
 // grelci-stuff
-#define SPODNJI_THERMO_VCC 
-#define SPODNJI_THERMO_GND
-#define SPODNJI_THERMO_CLK
-#define SPODNJI_THERMO_CS
-#define SPODNJI_THERMO_DO
+#define SPODNJI_THERMO_VCC 45
+#define SPODNJI_THERMO_GND 43
+#define SPODNJI_THERMO_CLK 51
+#define SPODNJI_THERMO_CS 49
+#define SPODNJI_THERMO_DO 47
 
 #define ZGORNJI_THERMO_VCC 
 #define ZGORNJI_THERMO_GND
@@ -19,10 +19,10 @@
 #define ZGORNJI_THERMO_DO
 
 
-#define TARGET_TEMP
+#define TARGET_TEMP 12
 
 
-#define SPODNJI_GRELEC
+#define SPODNJI_GRELEC 
 #define ZGORNJI_GRELEC
 
 // add other stuff here
