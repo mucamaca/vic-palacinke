@@ -26,5 +26,15 @@
 #define ZGORNJI_GRELEC
 
 //masa-things
+<<<<<<< HEAD
 #define MASA_PER_PANCAK E 3
 #define STEVILO_PALACINK 3
+=======
+#define MASA_PER_PANCAKE 3
+
+// stepper-things
+#define TRAK_PUL_PLUS
+#define TRAK_PUL_MINUS
+#define TRAK_DIR_PLUS
+#define TRAK_DIR_MINUS
+>>>>>>> 5f181189c8d853ca161a78208fd9fe50921cb53c
