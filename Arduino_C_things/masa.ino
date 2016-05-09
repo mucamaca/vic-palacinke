@@ -7,3 +7,8 @@
 char check_masa(){
   return 0;
 }
+
+void dispense_pancake(){
+  //TODO
+}
+
