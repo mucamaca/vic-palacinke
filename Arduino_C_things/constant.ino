@@ -27,3 +27,9 @@
 
 //masa-things
 #define MASA_PER_PANCAKE 3
+
+// stepper-things
+#define TRAK_PUL_PLUS
+#define TRAK_PUL_MINUS
+#define TRAK_DIR_PLUS
+#define TRAK_DIR_MINUS
