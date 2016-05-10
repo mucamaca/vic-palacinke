@@ -1,5 +1,5 @@
 /**
- * File s funkcijami za uravnavanje temperature grelcev. 
+ * File s funkcijami za upravljanje grelcev in pecenje. 
  */
 
 #include <max6675.h>
@@ -46,3 +46,5 @@ char grelci(){
     digitalWrite(ZGORNJI_GRELEC, 1);
   return 0;
 }
+
+
