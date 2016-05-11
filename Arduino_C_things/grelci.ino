@@ -30,8 +30,7 @@ char grelci_init(){
     */
 }
 
-// med dvema klicema te funkcije mora bit vsaj 900ms
-char grelci(){
+void grelci(){
   int t_spodnji = (int)spodnji_thermocouple.readCelsius();
   int t_zgornji = (int)zgornji_thermocouple.readCelsius();
 
@@ -45,6 +44,10 @@ char grelci(){
   else
     digitalWrite(ZGORNJI_GRELEC, 1);
   return 0;
+}
+
+void bake(){
+  is_baking = 1;
 }
 
 
