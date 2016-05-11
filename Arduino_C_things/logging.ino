@@ -22,7 +22,6 @@ char error_write(char errno){
   if(errno){
     digitalWrite(13, 1);
     Serial.write(errno / 100 + '0');
-    Serial.write((errno % 100) / 10 + '0');
     Serial.write(errno % 10 + '0');
   }
   return errno;
