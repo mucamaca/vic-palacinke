@@ -8,7 +8,7 @@ char check_masa(){
 
 void dispense_pancake(){
   static char pancake_index = 0;
-  pancake[pancake_index++] = steps;
+//  pancake[pancake_index++] = steps;
   //TODO
 }
 

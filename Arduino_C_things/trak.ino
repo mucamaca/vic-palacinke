@@ -4,7 +4,7 @@
 
 #include <Stepper.h>
 
-static Stepper trak_stepper = Stepper(1600, TRAK_PUL, TRAK_DIR); // mislm da ni 1600
+Stepper trak_stepper(1600, TRAK_PUL_PIN, TRAK_DIR_PIN); // mislm da ni 1600
 
 void step_trak(int steps){
   if(is_baking)
@@ -13,11 +13,11 @@ void step_trak(int steps){
   all_steps += steps;  
   int i;
   for(i = 0; i < STEVILO_PALACINK; i++){
-    if(all_steps - pancake[i] == RAZDALJA_DO_GRELCEV){
+    //if(all_steps - pancake[i] == RAZDALJA_DO_GRELCEV)
       bake();
-    }
-    else if(all_steps - pancake[i] == RAZDALJA_DO_ZVIJANJA){
-      zvij();
-    }
+    
+   // else if(all_steps - pancake[i] == RAZDALJA_DO_ZVIJANJA)
+      //zvij();
+    
   }
 }

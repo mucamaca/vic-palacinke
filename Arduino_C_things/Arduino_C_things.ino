@@ -3,7 +3,7 @@
  */
 
 long all_steps = 0, last_millis = 0;
-long pancake[STEVILO_PALACINK];
+//long pancake[STEVILO_PALACINK];
 bool should_dispense = true;
 bool is_baking = false; // k33pt4lk1ng4ndn013xpl0d0n4t3s
 void setup(){
@@ -15,13 +15,13 @@ void setup(){
 
 void loop(){
   // masa
-  check_masa(); 
+  //check_masa(); 
 
   // grelci
   grelci();
   
   // trak
-  check_position();
+  //check_position();
   
   // Stvar, ki skrbi, da je med dvema iteracijama loopa vsaj 1000 ms (zaradi termoclenov)
   if (millis() - last_millis < 1000)
