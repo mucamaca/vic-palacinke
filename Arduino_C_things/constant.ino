@@ -26,7 +26,7 @@
 #define TRAK_PUL_PIN 42
 #define TRAK_DIR_PIN 41
 
-// razdalje od zacetka traku (v motor stepih)
+// razdalje od zacetka traku (v motor stepih)-things
 #define RAZDALJA_DO_GRELCEV 
 #define RAZDALJA_DO_ZVIJANJA
 
