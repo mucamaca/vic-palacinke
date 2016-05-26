@@ -33,6 +33,7 @@ void loop(){
       delay(1000 - (millis() - last_millis));
     else
       step_trak(STEPS_PER_CYCLE);
+  }
   last_millis = millis();
 }
 
