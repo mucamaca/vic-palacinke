@@ -2,6 +2,8 @@
  * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen
  */
 
+#include <constant.h>
+
 long all_steps = 0, last_millis = 0;
 long pancake[2];
 bool should_dispense = true;
