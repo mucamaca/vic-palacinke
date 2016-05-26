@@ -1,3 +1,5 @@
+#include <EEPROM.h>
+
 union pancake_counter_t{
   char segments[2];
   uint16_t whole;
