@@ -2,21 +2,29 @@
  * File s funkcijami za nadzor na premikanjem traka.
  */
 
-#include <Stepper.h>
+#include <Timer.h>
 
-static Stepper trak_stepper(1600, TRAK_PUL_PIN, TRAK_DIR_PIN); // mislm da ni 1600
+Timer t;
 
-void step_trak(int steps){
+
+char trak_init(){
+  pinMode(TRAK_PUL_PIN, OUTPUT);
+  t.oscillate(TRAK_PUL_PIN, 1, 1); // podpicje, ostani tukaj z mano
+
+  pinMode(TRAK_DIR_PIN, OUTPUT);
+  digitalWrite(TRAK_PUL_PIN, 1); // ce se vrti v napacno smer nastav to na 0
+}
+
+void step_trak(int * steps){
   if(is_baking)
     return;
-  trak_stepper.step(steps);
-  all_steps += steps;  
+  t.update;
+  (*steps)++; 
   int i;
   for(i = 0; i < 2; i++){
-    if(all_steps - pancake[i] == RAZDALJA_DO_GRELCEV) // to je treba spremenit, ker nikol ne bo tocno tolk stepov
+    if(*steps - pancake[i] == RAZDALJA_DO_GRELCEV)
       bake();
-    else if(all_steps - pancake[i] == RAZDALJA_DO_ZVIJANJA) // to je treba tud spremenit, iz istega razloga
+    else if(*steps - pancake[i] == RAZDALJA_DO_ZVIJANJA)
       zvij();
-    
   }
 }
