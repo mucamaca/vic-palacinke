@@ -2,7 +2,7 @@ package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
 import edu.vic.pancake.piSide.GUI.GuiMain;
-import javafx.application.Application; //TODO MUCAMACA
+import javafx.application.Application;
 
 public class Main implements Runnable{
     public static boolean runningOnPi = true;

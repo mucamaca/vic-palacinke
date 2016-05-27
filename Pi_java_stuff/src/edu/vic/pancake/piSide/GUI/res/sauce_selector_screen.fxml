@@ -26,6 +26,12 @@
                     <Label BorderPane.alignment="BOTTOM_CENTER" text="Liquid bananas"/>
                 </bottom>
             </BorderPane>
+            <BorderPane prefHeight="400" prefWidth="250"
+                        onMouseClicked="#onSauce3Selected">
+                <bottom>
+                    <Label BorderPane.alignment="BOTTOM_CENTER" text="Gassed compressor"/>
+                </bottom>
+            </BorderPane>
         </FlowPane>
     </center>
 </BorderPane>
