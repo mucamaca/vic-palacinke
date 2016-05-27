@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.FlowPane?>
 <?import java.net.URL?>
+<?import javafx.scene.layout.GridPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
     <stylesheets>
@@ -19,25 +20,25 @@
         </Text>
     </top>
     <center>
-        <FlowPane BorderPane.alignment="CENTER">
-            <BorderPane prefHeight="400" prefWidth="260"
+        <GridPane BorderPane.alignment="CENTER">
+            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
                         onMouseClicked="#onSauce1Selected">
                 <bottom>
                     <Label BorderPane.alignment="BOTTOM_CENTER" text="Nutella"/>
                 </bottom>
             </BorderPane>
-            <BorderPane prefHeight="400" prefWidth="260"
+            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
                         onMouseClicked="#onSauce2Selected">
                 <bottom>
                     <Label BorderPane.alignment="BOTTOM_CENTER" text="Liquid bananas"/>
                 </bottom>
             </BorderPane>
-            <BorderPane prefHeight="400" prefWidth="260"
+            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
                         onMouseClicked="#onSauce3Selected">
                 <bottom>
                     <Label BorderPane.alignment="BOTTOM_CENTER" text="Gassed compressor"/>
                 </bottom>
             </BorderPane>
-        </FlowPane>
+        </GridPane>
     </center>
 </BorderPane>
