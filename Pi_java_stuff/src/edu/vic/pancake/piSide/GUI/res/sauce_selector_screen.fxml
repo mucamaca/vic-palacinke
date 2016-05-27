@@ -2,9 +2,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.FlowPane?>
 <?import java.net.URL?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
     <stylesheets>
@@ -21,24 +22,34 @@
     </top>
     <center>
         <GridPane BorderPane.alignment="CENTER">
-            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
-                        onMouseClicked="#onSauce1Selected">
-                <bottom>
-                    <Label BorderPane.alignment="BOTTOM_CENTER" text="Nutella"/>
-                </bottom>
-            </BorderPane>
-            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
-                        onMouseClicked="#onSauce2Selected">
-                <bottom>
-                    <Label BorderPane.alignment="BOTTOM_CENTER" text="Liquid bananas"/>
-                </bottom>
-            </BorderPane>
-            <BorderPane prefHeight="400" prefWidth="260" styleClass="selectPanel"
-                        onMouseClicked="#onSauce3Selected">
-                <bottom>
-                    <Label BorderPane.alignment="BOTTOM_CENTER" text="Gassed compressor"/>
-                </bottom>
-            </BorderPane>
+            <children>
+                <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="selectPanel"
+                            onMouseClicked="#onSauce1Selected">
+                    <bottom>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Nutella"/>
+                    </bottom>
+                </BorderPane>
+                <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="1"  styleClass="selectPanel"
+                            onMouseClicked="#onSauce2Selected">
+                    <bottom>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Liquid bananas"/>
+                    </bottom>
+                </BorderPane>
+                <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="2"  styleClass="selectPanel"
+                            onMouseClicked="#onSauce3Selected">
+                    <bottom>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Gassed compressor"/>
+                    </bottom>
+                </BorderPane>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100" percentWidth="33.3"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100" percentWidth="33.3"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="100" percentWidth="33.3"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" minHeight="200" percentHeight="98.5"/>
+            </rowConstraints>
         </GridPane>
     </center>
 </BorderPane>
