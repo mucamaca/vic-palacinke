@@ -1,5 +1,5 @@
 .background {
-    -fx-background-image: url("edu/vic/pancake/piSide/GUI/res/css/pictures/404.png");
+    -fx-background-image: url("edu/vic/pancake/piSide/GUI/res/pictures/404.png");
     -fx-text-fill: black;
-    -fx-opacity: 0.6;
+    -fx-opacity: 0.8;
 }
