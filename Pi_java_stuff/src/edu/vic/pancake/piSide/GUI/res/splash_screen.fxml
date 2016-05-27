@@ -9,7 +9,7 @@
         <URL value="@css/ZacetnaStran.css" />
         <URL value="@css/Splosno.css"/>
     </stylesheets>
-    <Text text="PfankuchenMacher9000">
+    <Text text="PfankuchenMacher9000" styleClass="text">
         <font>
             <Font size="25.0"/>
         </font>
