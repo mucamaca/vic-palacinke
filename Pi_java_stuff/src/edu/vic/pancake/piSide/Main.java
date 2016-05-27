@@ -2,12 +2,11 @@ package edu.vic.pancake.piSide;
 
 import com.pi4j.system.SystemInfo;
 import edu.vic.pancake.piSide.GUI.GuiMain;
-import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
-import javafx.application.Application; //TODO MUCAMACA
+import javafx.application.Application;
 
 public class Main implements Runnable{
     public static boolean runningOnPi = true;
-    public ArduinoCommunication communication;
+    //public ArduinoCommunication communication;
 
     public static void main(String[] args) {
         new Main().run();

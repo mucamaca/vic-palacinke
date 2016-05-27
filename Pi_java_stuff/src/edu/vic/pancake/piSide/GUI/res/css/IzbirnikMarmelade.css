@@ -1,0 +1,5 @@
+.selectPanel {
+    -fx-background-color: lightslategray;
+    -fx-border-color: darkblue;
+    -fx-border-radius: 10px;
+}
