@@ -11,7 +11,9 @@ public class SauceSelectorController implements ScreenListener{
         GuiMain.controllers.put("SauceSelector", this);
     }
 
-    public void onSauceSelected(int sauce){
+    private void onSauceSelected(int sauce){
+        //Debug
+        System.out.println("Selected sauce #" + sauce);
         //Handle stuff
     }
 
