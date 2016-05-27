@@ -11,8 +11,7 @@
     </stylesheets>
     <Text text="PfankuchenMacher9000" styleClass="text">
         <font>
-            <Font size="25.0"/>
+            <Font size="35.0"/>
         </font>
     </Text>
-
 </FlowPane>
