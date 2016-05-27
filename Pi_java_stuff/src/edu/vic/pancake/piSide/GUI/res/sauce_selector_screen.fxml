@@ -3,9 +3,11 @@
 <?import javafx.scene.text.Text?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
-    <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev">
-        <font>
-            <Font size="25.0"/>
-        </font>
-    </Text>
+    <top>
+        <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Text>
+    </top>
 </BorderPane>
