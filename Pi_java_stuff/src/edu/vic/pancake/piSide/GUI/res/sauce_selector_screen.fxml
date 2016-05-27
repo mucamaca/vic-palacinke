@@ -3,6 +3,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
     <top>
@@ -14,8 +15,7 @@
     </top>
     <center>
         <FlowPane BorderPane.alignment="CENTER">
-            <BorderPane prefHeight="400" prefWidth="250"
-                        onMouseClicked="#onSauce1Selected">
+            <BorderPane prefHeight="400" prefWidth="250">
                 <bottom>
                     <Label BorderPane.alignment="BOTTOM_CENTER" text="Nutella"/>
                 </bottom>
