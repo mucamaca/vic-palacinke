@@ -1,5 +1,6 @@
 /**
- * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen
+ * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen.
+ * bee.
  */
 
 #include "constant.h"
