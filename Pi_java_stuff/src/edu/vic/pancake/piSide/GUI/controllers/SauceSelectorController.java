@@ -4,9 +4,20 @@ import edu.vic.pancake.piSide.GUI.GuiMain;
 import edu.vic.pancake.piSide.GUI.ScreenListener;
 import edu.vic.pancake.piSide.GUI.Screens;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 public class SauceSelectorController implements ScreenListener{
+    public BorderPane saucePanel1, saucePanel2, saucePanel3;
+
     public SauceSelectorController() {
         GuiMain.controllers.put("SauceSelector", this);
     }
@@ -20,8 +31,25 @@ public class SauceSelectorController implements ScreenListener{
     @Override
     public void onScreenSwitched(Screens screen) {
         if (screen == Screens.SELECT_SAUCE){
-            //Do shit
+            //Debug
             System.out.println("Sauce selector created");
+            //Populate Text
+            Properties selection = new Properties();
+            try {
+                FileInputStream prefFileInStream = new FileInputStream(new File("Selection.properties"));
+                selection.load(prefFileInStream);
+                prefFileInStream.close();
+            } catch (FileNotFoundException e) {
+                System.err.println("Today's selection file not found!");
+                e.printStackTrace();
+                return;
+            } catch (IOException e) {
+                System.err.println("Error while loading today's selection.");
+                return;
+            }
+            setPanelText(saucePanel1, selection.getProperty("sauce1"));
+            setPanelText(saucePanel2, selection.getProperty("sauce2"));
+            setPanelText(saucePanel3, selection.getProperty("sauce3"));
         }
     }
 
@@ -39,5 +67,13 @@ public class SauceSelectorController implements ScreenListener{
     @FXML
     public void onSauce3Selected(MouseEvent e){
         onSauceSelected(3);
+    }
+
+    private void setPanelText(BorderPane pane, String text){
+        for (Node node : pane.getChildren()){
+            if (node instanceof Label){
+                ((Label) node).setText(text);
+            }
+        }
     }
 }

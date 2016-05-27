@@ -21,25 +21,25 @@
         </Text>
     </top>
     <center>
-        <GridPane BorderPane.alignment="CENTER">
+        <GridPane BorderPane.alignment="CENTER" hgap="5">
             <padding><Insets right="10" left="10"/></padding>
             <children>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="selectPanel"
-                            onMouseClicked="#onSauce1Selected">
+                            onMouseClicked="#onSauce1Selected" fx:id="saucePanel1">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Nutella"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Prvi namaz"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="1"  styleClass="selectPanel"
-                            onMouseClicked="#onSauce2Selected">
+                            onMouseClicked="#onSauce2Selected" fx:id="saucePanel2">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Liquid bananas"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Drugi namaz"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="2"  styleClass="selectPanel"
-                            onMouseClicked="#onSauce3Selected">
+                            onMouseClicked="#onSauce3Selected" fx:id="saucePanel3">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Gassed compressor"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Tretji namaz"/>
                     </bottom>
                 </BorderPane>
             </children>
