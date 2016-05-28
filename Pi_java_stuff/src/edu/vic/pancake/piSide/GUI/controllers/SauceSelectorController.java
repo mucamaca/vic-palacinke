@@ -58,7 +58,6 @@ public class SauceSelectorController implements ScreenListener{
             }
             for (int i = 1; i < 4; i++){
                 String fileName = selection.getProperty("sauce" + i + "Img");
-                System.out.println(fileName);
                 Image bgImage = new Image(fileName);
                 panes[i-1].setBackground(new Background(new BackgroundImage(bgImage, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, null)));
             }
