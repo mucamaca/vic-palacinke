@@ -1,8 +1,4 @@
 .background {
-    -fx-background-image: url("/edu/vic/pancake/piSide/GUI/res/pictures/404.png");
-    -fx-text-fill: black;
+    -fx-background-color: #00596F;
     -fx-opacity: 0.8;
-    -fx-background-position: center;
-    -fx-background-repeat: stretch;
-    -fx-background-color: #00596f;
 }
