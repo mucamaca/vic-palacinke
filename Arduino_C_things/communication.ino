@@ -5,7 +5,7 @@
 
 char comm_init(){
   Serial.begin(9600);
-  return check_comm();
+  return comm_check();
 }
 
 #define HANDSHAKE 42
