@@ -6,6 +6,7 @@ import edu.vic.pancake.piSide.GUI.Screens;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
@@ -17,9 +18,13 @@ import java.util.Properties;
 
 public class SauceSelectorController implements ScreenListener{
     public BorderPane saucePanel1, saucePanel2, saucePanel3;
+    private BorderPane [] panes = new BorderPane[3];
 
     public SauceSelectorController() {
         GuiMain.controllers.put("SauceSelector", this);
+        panes[0] = saucePanel1;
+        panes[1] = saucePanel2;
+        panes[2] = saucePanel3;
     }
 
     private void onSauceSelected(int sauce){
@@ -50,6 +55,11 @@ public class SauceSelectorController implements ScreenListener{
             setPanelText(saucePanel1, selection.getProperty("sauce1"));
             setPanelText(saucePanel2, selection.getProperty("sauce2"));
             setPanelText(saucePanel3, selection.getProperty("sauce3"));
+            for (int i = 1; i < 4; i++){
+                String fileName = selection.getProperty("sauce" + i + "Img");
+                Image bgImage = new Image(fileName);
+
+            }
         }
     }
 
