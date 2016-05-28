@@ -3,4 +3,9 @@
     -fx-font-weight: bold;
     -fx-fill: #242424;
 }
+.background{
+    -fx-background-image: url("/edu/vic/pancake/piSide/GUI/res/pictures/404.png");
+    -fx-background-position: center;
+    -fx-background-repeat: stretch;
+}
 
