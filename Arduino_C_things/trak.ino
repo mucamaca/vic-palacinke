@@ -15,16 +15,9 @@ char trak_init(){
   digitalWrite(TRAK_PUL_PIN, 1); // ce se vrti v napacno smer nastav to na 0
 }
 
-void step_trak(int * steps){
+void step_trak(long * steps){
   if(is_baking)
     return;
-  t.update;
+  t.update();
   (*steps)++; 
-  int i;
-  for(i = 0; i < 2; i++){
-    if(*steps - pancake[i] == RAZDALJA_DO_GRELCEV)
-      bake();
-    else if(*steps - pancake[i] == RAZDALJA_DO_ZVIJANJA)
-      zvij();
-  }
 }

@@ -48,9 +48,11 @@ void heat(){
     spodnji[i]=(int)spodnji_thermocouple.readCelsius();
     zgornji[i]=(int)zgornji_thermocouple.readCelsius();
     delay(1000);
+    Serial.println(spodnji[i]);
+    Serial.println(zgornji[i]);
     i++;
     i%=3;
-  }while((zgornji[0]+zgornji[1]+zgornji[2])/3 < TARGET_TEMP - 20 && (spodnji[0]+spodnji[1]+spodnji[2])/3 < TARGET_TEMP - 20 )
+  }while((zgornji[0]+zgornji[1]+zgornji[2])/3 < TARGET_TEMP - 20 && (spodnji[0]+spodnji[1]+spodnji[2])/3 < TARGET_TEMP - 20 );
   
   digitalWrite(ZGORNJI_GRELEC, 0);
   digitalWrite(SPODNJI_GRELEC, 0);

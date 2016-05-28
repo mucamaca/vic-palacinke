@@ -7,7 +7,7 @@
 static Stepper dosing_stepper(1600, DOSING_STEPPER_PUL_PIN, DOSING_STEPPER_DIR_PIN);
 
 char masa_init(){
-  char ms=check_masa();
+  char masa=check_masa();
   return masa?masa:init_ultrasonic();
 }
 
@@ -22,7 +22,7 @@ char init_ultrasonic(){
 void dispense_pancake(){
   static char pancake_index=0;
   pancake_index=1-pancake_index;
-  pancake[pancake_index++] = steps;
+  pancake[pancake_index++] = all_steps;
   //TODO
 }
 
