@@ -1,5 +1,5 @@
 /**
- * File z logging funkcijami za sporocanje debuging sporocil v logfile na RPi-ju
+ * File z logging funkcijami za sporocanje debuging sporocil v log na RPi-ju
  */
 
  
@@ -20,10 +20,16 @@ void write(const char message[127], bool init, bool warning){
  
 char error_write(char errno){
   if(errno){
-    digitalWrite(13, 1);
     Serial.write(errno / 100 + '0');
     Serial.write(errno % 10 + '0');
+  }else{
+    success_write();
   }
   return errno;
+}
+
+char success_write(){
+  Serial.write(0);
+  return 0;
 }
 

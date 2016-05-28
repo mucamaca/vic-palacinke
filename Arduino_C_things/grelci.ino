@@ -11,30 +11,49 @@ static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORN
 char grelci_init(){
   pinMode(SPODNJI_GRELEC, OUTPUT);
   pinMode(ZGORNJI_GRELEC, OUTPUT);
-  
+
+  digitalWrite(ZGORNJI_GRELEC, 1);
+  digitalWrite(SPODNJI_GRELEC, 1);
+    
   delay(1000);
- /* if(spodnji_thermocouple.readCelsius() == NAN || zgornji_thermocouple.readCelsius() == NAN)
+  
+  if(spodnji_thermocouple.readCelsius() == 0 || zgornji_thermocouple.readCelsius() == 0)
     return 84; //some not yet defined errorcode
   else
     return 0;
-    */
 }
 
-void grelci(){
-  int t_spodnji = (int)spodnji_thermocouple.readCelsius();
-  int t_zgornji = (int)zgornji_thermocouple.readCelsius();
-  Serial.println(t_spodnji);
-  Serial.println(t_zgornji);
-  if(t_spodnji > TARGET_TEMP)
+void check_grelci(){
+  if((int)spodnji_thermocouple.readCelsius() > TARGET_TEMP)
     digitalWrite(SPODNJI_GRELEC, 0);
   else
     digitalWrite(SPODNJI_GRELEC, 1);
-  /*  
-  if(t_zgornji > TARGET_TEMP)
+    
+  if((int)zgornji_thermocouple.readCelsius() > TARGET_TEMP)
     digitalWrite(ZGORNJI_GRELEC, 0);
   else
     digitalWrite(ZGORNJI_GRELEC, 1);
-  return; */
+  return; 
+}
+
+void heat(){
+  char i = 0;
+  int spodnji[3]={0,0,0};
+  int zgornji[3]={0,0,0};
+  
+  digitalWrite(ZGORNJI_GRELEC, 1);
+  digitalWrite(SPODNJI_GRELEC, 1);
+  
+  do{
+    spodnji[i]=(int)spodnji_thermocouple.readCelsius();
+    zgornji[i]=(int)zgornji_thermocouple.readCelsius();
+    delay(1000);
+    i++;
+    i%=3;
+  }while((zgornji[0]+zgornji[1]+zgornji[2])/3 < TARGET_TEMP - 20 && (spodnji[0]+spodnji[1]+spodnji[2])/3 < TARGET_TEMP - 20 )
+  
+  digitalWrite(ZGORNJI_GRELEC, 0);
+  digitalWrite(SPODNJI_GRELEC, 0);
 }
 
 void bake(){

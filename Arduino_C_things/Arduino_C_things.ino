@@ -1,6 +1,5 @@
 /**
  * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen.
- * bee.
  */
 
 #include "constant.h"
@@ -15,13 +14,19 @@ bool is_baking = false;
 void setup(){
   //while(comm_init())
     delay(400);
-  
+
   grelci_init();
 
   trak_init();
+
+  masa_init();
+
+  heat();
 }
 
 void loop(){
   step_trak(&all_steps);
+
+  grelci();
 }
 
