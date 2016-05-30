@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="rxtxuniversal">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal/Linux/i686-unknown-linux-gnu" />
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal/Linux/i686-unknown-linux-gnu" />
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal/Linux/i686-unknown-linux-gnu" />
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal/Linux/ia64-unkown-linux-gnu" />
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal/Linux/x86_64-unknown-linux-gnu" />
+    </NATIVE>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtxuniversal" recursive="false" />
+  </library>
+</component>

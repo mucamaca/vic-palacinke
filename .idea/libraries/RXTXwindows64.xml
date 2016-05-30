@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="RXTXwindows64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Pi_java_stuff/lib/rxtx4windows64/RXTXcomm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtx4windows64" />
+      <root url="file://$PROJECT_DIR$/Pi_java_stuff/lib/rxtx4windows64" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
