@@ -8,6 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="pi4j" level="project" />
-    <orderEntry type="library" name="RXTXcomm" level="project" />
+    <orderEntry type="library" name="RXTXwindows64" level="project" />
+    <orderEntry type="library" name="rxtxuniversal" level="project" />
   </component>
 </module>
