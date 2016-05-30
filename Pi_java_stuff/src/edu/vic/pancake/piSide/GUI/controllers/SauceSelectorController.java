@@ -3,6 +3,9 @@ package edu.vic.pancake.piSide.GUI.controllers;
 import edu.vic.pancake.piSide.GUI.GuiMain;
 import edu.vic.pancake.piSide.GUI.ScreenListener;
 import edu.vic.pancake.piSide.GUI.Screens;
+import edu.vic.pancake.piSide.Main;
+import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
+import edu.vic.pancake.piSide.netwerking.CodeCollection;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -28,6 +31,15 @@ public class SauceSelectorController implements ScreenListener{
         //Debug
         System.out.println("Selected sauce #" + sauce);
         //Handle stuff
+        if (Main.runningOnPi) {
+            try {
+                ArduinoCommunication.out.write(CodeCollection.SAUCE_SELECTIONS[sauce - 1]);
+                ArduinoCommunication.out.write(CodeCollection.START_PANCAKE_MAKING);
+            } catch (IOException e) {
+                System.err.println("Failed to write sauce selection to Arduino.");
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
