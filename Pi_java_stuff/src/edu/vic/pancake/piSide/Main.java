@@ -5,11 +5,9 @@ import edu.vic.pancake.piSide.GUI.GuiMain;
 import javafx.application.Application;
 
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
-import javafx.application.Application; //TODO MUCAMACA
 
 public class Main implements Runnable{
     public static boolean runningOnPi = true;
-    public ArduinoCommunication communication;
 
     public static void main(String[] args) {
         new Main().run();
@@ -35,5 +33,8 @@ public class Main implements Runnable{
             throw new NotRunningOnPiException(e);
         }
         //Če smo kle, pol laufamo na piju
+        if (ArduinoCommunication.isOpen()){
+            System.out.println("Arduino comm up and running!");
+        }
     }
 }
