@@ -4,7 +4,7 @@
 
 #include <Stepper.h>
 
-static Stepper dosing_stepper(1600, DOSING_STEPPER_PUL_PIN, DOSING_STEPPER_DIR_PIN);
+static Stepper dosing_stepper(1600, DOSING_PUL_PIN, DOSING_DIR_PIN);
 
 char masa_init(){
   char masa=check_masa();
@@ -23,6 +23,8 @@ void dispense_pancake(){
   static char pancake_index=0;
   pancake_index=1-pancake_index;
   pancake[pancake_index++] = all_steps;
-  //TODO
+  dosing_stepper.step(30);
+  delay(MASA_PER_PANCAKE * 1000);
+  dosing_stepper.step(-30);
 }
 

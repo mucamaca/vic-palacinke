@@ -21,26 +21,28 @@ void setup(){
   write("trak OK", 1, 0);
   masa_init();
   write("masa OK",1, 0);
-  heat();
+  //heat();
   write("SEGRETO", 1,0);
 }
 
 void loop(){
   step_trak(&all_steps);
-
   int i;
   for(i = 0; i < 2; i++){
-    switch(all_steps - pancake[i]){
+    /*switch(all_steps - pancake[i]){
       case RAZDALJA_DO_GRELCEV:
+        write("going to bake...", 0,0);
         bake();
         break;
       case RAZDALJA_DO_ZVIJANJA:
+        write("going to roll", 0,0);
         zvij();
         break;
       case END_OF_TRAK:
+        write("going to dispense",0,0);
         dispense_pancake();
         break;
-    }
+    }*/
   }
   check_grelci();
   //write("cycle_completed",0,0);

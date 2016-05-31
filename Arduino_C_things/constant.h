@@ -24,8 +24,8 @@
 
 
 // (d)dosing-stuff
-#define DOSING_STEPPER_PUL_PIN 22
-#define DOSING_STEPPER_DIR_PIN 23
+#define DOSING_PUL_PIN 22
+#define DOSING_DIR_PIN 23
 
 // trak-things
 #define TRAK_PUL_PIN 24

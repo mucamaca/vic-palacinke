@@ -20,4 +20,5 @@ void step_trak(long * steps){
     return;
   t.update();
   (*steps)++; 
+  Serial.println(*steps);
 }
