@@ -4,14 +4,13 @@
 
 #include <Stepper.h>
 
-Stepper stepper(1600, 0, 1);
+Stepper stepper(400, 1, 0);
 
 void setup() {
   pinMode(2,INPUT);
-  stepper.setSpeed(100);
 }
 
 void loop() {
   if(digitalRead(2))
-    stepper.step(100);
+    stepper.step(5);
 }
