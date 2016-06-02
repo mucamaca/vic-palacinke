@@ -2,6 +2,6 @@ void setup(){
   Serial.begin(9600);
 }
 void loop(){
-  Serial.println(analogWrite(0));
+  Serial.println(analogRead(0));
   delay(500);
 }
