@@ -23,6 +23,7 @@ public class GuiMain extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        setUserAgentStylesheet(STYLESHEET_MODENA);
         Parent splashFxml = FXMLLoader.load(getClass().getResource("res/splash_screen.fxml"));
         Parent insertMoneyFxml = FXMLLoader.load(getClass().getResource("res/insert_money_screen.fxml"));
         Parent selectSauceFxml = FXMLLoader.load(getClass().getResource("res/sauce_selector_screen.fxml"));

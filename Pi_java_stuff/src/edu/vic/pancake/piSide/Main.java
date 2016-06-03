@@ -30,7 +30,7 @@ public class Main implements Runnable{
         try{
             SystemInfo.getHardware();
         } catch (Exception e) {
-            throw new NotRunningOnPiException(e);
+            return;
         }
         //Če smo kle, pol laufamo na piju
         runningOnPi = true;

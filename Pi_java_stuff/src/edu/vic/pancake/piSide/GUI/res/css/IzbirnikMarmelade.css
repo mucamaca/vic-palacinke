@@ -18,7 +18,7 @@
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.9) , 5, 0.0 , 0 , 1 );
     -fx-text-fill: #f3a11a;
     -fx-font-size: 20px;
-    -fx-padding: 60%;
+    -fx-padding: 65%;
 }
 .textnavrhu {
     -fx-fill: #f3a11a;
