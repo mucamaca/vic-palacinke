@@ -1,0 +1,5 @@
+<?import javafx.scene.layout.FlowPane?>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml" fx:controller="edu.vic.pancake.piSide.GUI.controllers.WipScreenController">
+
+</FlowPane>
