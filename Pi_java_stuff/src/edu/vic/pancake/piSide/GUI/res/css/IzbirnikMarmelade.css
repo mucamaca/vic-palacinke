@@ -1,5 +1,11 @@
 .selectPanel {
-    -fx-background-color: lightslategray;
-    -fx-border-color: darkblue;
-    -fx-border-radius: 10px;
+    -fx-background-color: #008ba2;
+    -fx-border-color: #f3a11a;
+    -fx-border-radius: 14px;
+    -fx-font-size: 20pt;
+    -fx-border-width: 3px;
+}
+.selectpaneltext {
+    -fx-text-fill: #f3a11a;
+
 }

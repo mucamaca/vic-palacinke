@@ -27,19 +27,19 @@
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="selectPanel"
                             onMouseClicked="#onSauce1Selected" fx:id="saucePanel1">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Prvi namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Prvi namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="1"  styleClass="selectPanel"
                             onMouseClicked="#onSauce2Selected" fx:id="saucePanel2">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Drugi namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Drugi namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="2"  styleClass="selectPanel"
                             onMouseClicked="#onSauce3Selected" fx:id="saucePanel3">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Tretji namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Tretji namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
             </children>
