@@ -13,8 +13,10 @@
     -fx-background-color:
             linear-gradient(#f2ba44, #DF841A),
             radial-gradient(center 50% -40%, radius 200%, #ee8e1a 45%, #C3711A 50%);
-    -fx-background-radius: 5, 4;
+    -fx-background-radius: 7, 6;
     -fx-background-insets: 0, 1;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
     -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
 }
