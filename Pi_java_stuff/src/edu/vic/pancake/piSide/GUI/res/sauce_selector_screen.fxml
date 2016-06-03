@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="background"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
     <stylesheets>
@@ -53,4 +55,10 @@
             </rowConstraints>
         </GridPane>
     </center>
+    <bottom>
+        <FlowPane alignment="CENTER">
+            <padding><Insets bottom="3"/></padding>
+            <Button text="Brez namaza" prefWidth="350"/>
+        </FlowPane>
+    </bottom>
 </BorderPane>
