@@ -1,6 +1,6 @@
 .text{
     -fx-font-size: 40px;
-    -fx-font-weight: bold;
+    -fx-font-weight: 300;
     -fx-fill: #242424;
 }
 .background{
