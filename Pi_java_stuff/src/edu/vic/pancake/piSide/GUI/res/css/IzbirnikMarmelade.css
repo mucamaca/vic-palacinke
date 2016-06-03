@@ -1,4 +1,5 @@
 .selectPanel {
+    -fx-background-color: #f3a11a;
     -fx-border-color: #f3a11a;
     -fx-border-radius: 20px;
     -fx-font-size: 20pt;

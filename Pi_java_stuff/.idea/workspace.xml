@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a45ea12-eda6-4449-8f5b-de2247cbc9de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
@@ -71,8 +70,8 @@
       <file leaf-file-name="sauce_selector_screen.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="46" column="87" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
+            <state relative-caret-position="153">
+              <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -121,8 +120,8 @@
       <file leaf-file-name="IzbirnikMarmelade.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="17">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -131,8 +130,8 @@
       <file leaf-file-name="Splosno.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="17">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -141,8 +140,8 @@
       <file leaf-file-name="ZacetnaStran.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="51">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -197,10 +196,10 @@
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/InsertMoneyController.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
       </list>
     </option>
   </component>
@@ -1006,7 +1005,7 @@
       <workItem from="1460882886301" duration="306000" />
       <workItem from="1460883350453" duration="131000" />
       <workItem from="1460883501952" duration="4391000" />
-      <workItem from="1464962482171" duration="2089000" />
+      <workItem from="1464962482171" duration="2465000" />
     </task>
     <task id="LOCAL-00001" summary="Popravk readme.md, da se res ne bo dal zgrešit da se ne sme odpirat brez idee">
       <created>1449505874196</created>
@@ -1127,11 +1126,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464963773130</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implemented sauceSelector switch">
+      <created>1464964577248</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1464964577248</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17506000" />
+    <option name="totallyTimeSpent" value="17882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1568,6 +1574,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1575,30 +1605,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1615,8 +1621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="87" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
+        <state relative-caret-position="153">
+          <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 .text{
     -fx-font-size: 40px;
     -fx-font-weight: 300;
-    -fx-fill: #242424;
+    -fx-fill: rgba(0, 0, 0, 1);
 }
 .background{
     -fx-background-image: url("/edu/vic/pancake/piSide/GUI/res/pictures/404.png");
