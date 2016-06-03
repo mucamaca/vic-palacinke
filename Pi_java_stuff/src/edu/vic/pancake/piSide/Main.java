@@ -7,7 +7,7 @@ import javafx.application.Application;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
 
 public class Main implements Runnable{
-    public static boolean runningOnPi = true;
+    public static boolean runningOnPi = false;
 
     public static void main(String[] args) {
         new Main().run();
@@ -30,9 +30,10 @@ public class Main implements Runnable{
         try{
             SystemInfo.getHardware();
         } catch (Exception e) {
-            throw new NotRunningOnPiException(e);
+            return;
         }
         //Če smo kle, pol laufamo na piju
+        runningOnPi = true;
         if (ArduinoCommunication.isOpen()){
             System.out.println("Arduino comm up and running!");
         }

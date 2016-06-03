@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="background"
             fx:controller="edu.vic.pancake.piSide.GUI.controllers.SauceSelectorController">
     <stylesheets>
@@ -14,7 +16,7 @@
         <URL value="@css/IzbirnikMarmelade.css"/>
     </stylesheets>
     <top>
-        <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev">
+        <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev" styleClass="textnavrhu">
             <font>
                 <Font size="25.0"/>
             </font>
@@ -27,19 +29,19 @@
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="selectPanel"
                             onMouseClicked="#onSauce1Selected" fx:id="saucePanel1">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Prvi namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Prvi namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="1"  styleClass="selectPanel"
                             onMouseClicked="#onSauce2Selected" fx:id="saucePanel2">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Drugi namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Drugi namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
                 <BorderPane GridPane.rowIndex="0" GridPane.columnIndex="2"  styleClass="selectPanel"
                             onMouseClicked="#onSauce3Selected" fx:id="saucePanel3">
                     <bottom>
-                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Tretji namaz"/>
+                        <Label BorderPane.alignment="BOTTOM_CENTER" text="Tretji namaz" styleClass="selectpaneltext"/>
                     </bottom>
                 </BorderPane>
             </children>
@@ -53,4 +55,10 @@
             </rowConstraints>
         </GridPane>
     </center>
+    <bottom>
+        <FlowPane alignment="CENTER">
+            <padding><Insets bottom="3"/></padding>
+            <Button text="Brez namaza" prefWidth="450" onAction="#ohneFill" styleClass="button"/>
+        </FlowPane>
+    </bottom>
 </BorderPane>

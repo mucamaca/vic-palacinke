@@ -20,12 +20,10 @@ public class InsertMoneyController implements Runnable, ScreenListener{
     @Override
     public void run() {
         //Listen to money inserter, when ok, call onAllMoney and return
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                onAllMoneyInserted();
-            }
-        });
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ignored) {}
+        Platform.runLater(this::onAllMoneyInserted);
     }
 
     @Override
