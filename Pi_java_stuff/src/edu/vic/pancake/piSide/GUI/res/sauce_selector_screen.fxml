@@ -58,7 +58,7 @@
     <bottom>
         <FlowPane alignment="CENTER">
             <padding><Insets bottom="3"/></padding>
-            <Button text="Brez namaza" prefWidth="350"/>
+            <Button text="Brez namaza" prefWidth="350" onAction="#ohneFill"/>
         </FlowPane>
     </bottom>
 </BorderPane>
