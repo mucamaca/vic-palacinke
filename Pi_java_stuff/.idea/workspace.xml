@@ -4,7 +4,7 @@
     <list default="true" id="3a45ea12-eda6-4449-8f5b-de2247cbc9de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
     </list>
     <ignored path="Palačinka Pi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,16 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GuiMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SplashController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SplashController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sauce_selector_screen.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sauce_selector_screen.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
+            <state relative-caret-position="459">
+              <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -108,22 +98,30 @@
       <file leaf-file-name="SauceSelectorController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="214">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4014#4015#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IzbirnikMarmelade.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IzbirnikMarmelade.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="404.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/pictures/404.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -360,6 +358,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pictures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Palačinka Pi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pi_java_stuff" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="piSide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -447,8 +475,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtimeDir/Selection.properties</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/splash_screen.fxml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/netwerking/CodeCollection.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -456,9 +486,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtimeDir/marmelada.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtimeDir/nutella.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/runtimeDir/salca_dreka.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/WipScreenController.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/wip_screen..fxml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -1005,7 +1034,7 @@
       <workItem from="1460882886301" duration="306000" />
       <workItem from="1460883350453" duration="131000" />
       <workItem from="1460883501952" duration="4391000" />
-      <workItem from="1464962482171" duration="2465000" />
+      <workItem from="1464962482171" duration="3457000" />
     </task>
     <task id="LOCAL-00001" summary="Popravk readme.md, da se res ne bo dal zgrešit da se ne sme odpirat brez idee">
       <created>1449505874196</created>
@@ -1133,11 +1162,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464964577248</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="design stuff">
+      <created>1464964978459</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1464964978459</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17882000" />
+    <option name="totallyTimeSpent" value="18874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1202,7 +1238,8 @@
     <MESSAGE value="Workaround for JFX not providing onShown events" />
     <MESSAGE value="Added sauce selector stuff WIP" />
     <MESSAGE value="Implemented sauceSelector switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented sauceSelector switch" />
+    <MESSAGE value="design stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="design stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1215,14 +1252,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1590,20 +1619,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        <state relative-caret-position="214">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4014#4015#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1621,13 +1643,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
+        <state relative-caret-position="459">
+          <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/pictures/404.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
