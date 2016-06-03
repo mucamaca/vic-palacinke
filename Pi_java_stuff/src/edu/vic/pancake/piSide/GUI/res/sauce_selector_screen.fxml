@@ -16,7 +16,7 @@
         <URL value="@css/IzbirnikMarmelade.css"/>
     </stylesheets>
     <top>
-        <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev">
+        <Text BorderPane.alignment="TOP_CENTER" text="Izberi nadev" styleClass="textnavrhu">
             <font>
                 <Font size="25.0"/>
             </font>

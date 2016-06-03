@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a45ea12-eda6-4449-8f5b-de2247cbc9de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/dejdnar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" afterPath="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
     </list>
     <ignored path="Palačinka Pi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="sauce_selector_screen.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
+            <state relative-caret-position="255">
+              <caret line="18" column="90" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -52,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dejdnar.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dejdnar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/dejdnar.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -78,17 +80,17 @@
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="214">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3845#3846#0" expanded="true" />
-                <element signature="e#3879#3880#0" expanded="true" />
-                <element signature="e#3938#3939#0" expanded="true" />
-                <element signature="e#3972#3973#0" expanded="true" />
-                <element signature="e#4031#4032#0" expanded="true" />
-                <element signature="e#4065#4066#0" expanded="true" />
-                <element signature="e#4117#4118#0" expanded="true" />
-                <element signature="e#4151#4152#0" expanded="true" />
+                <element signature="e#3787#3788#0" expanded="true" />
+                <element signature="e#3821#3822#0" expanded="true" />
+                <element signature="e#3880#3881#0" expanded="true" />
+                <element signature="e#3914#3915#0" expanded="true" />
+                <element signature="e#3973#3974#0" expanded="true" />
+                <element signature="e#4007#4008#0" expanded="true" />
+                <element signature="e#4059#4060#0" expanded="true" />
+                <element signature="e#4093#4094#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,27 +99,14 @@
       <file leaf-file-name="IzbirnikMarmelade.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="323">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wip_screen..fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/wip_screen..fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.png" pinned="false" current-in-tab="false">
+      <file leaf-file-name="404.png" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/pictures/404.png">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -137,8 +126,8 @@
       <file leaf-file-name="ZacetnaStran.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="34">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -194,11 +183,11 @@
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/InsertMoneyController.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/netwerking/ArduinoCommunication.java" />
         <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/dejdnar.css" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css" />
+        <option value="$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css" />
       </list>
     </option>
   </component>
@@ -477,6 +466,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/GuiMain.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -485,6 +475,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/wip_screen.fxml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -492,6 +483,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/wip_screen..fxml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -1031,7 +1023,7 @@
       <workItem from="1460882886301" duration="306000" />
       <workItem from="1460883350453" duration="131000" />
       <workItem from="1460883501952" duration="4391000" />
-      <workItem from="1464962482171" duration="4211000" />
+      <workItem from="1464962482171" duration="5179000" />
     </task>
     <task id="LOCAL-00001" summary="Popravk readme.md, da se res ne bo dal zgrešit da se ne sme odpirat brez idee">
       <created>1449505874196</created>
@@ -1187,18 +1179,34 @@
       <option name="project" value="LOCAL" />
       <updated>1464966410026</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="dej dnar css&#10;&#10;">
+      <created>1464966714767</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1464966714767</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19628000" />
+    <option name="totallyTimeSpent" value="20596000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1211,6 +1219,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19989339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1224,7 +1233,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1258,7 +1266,8 @@
     <MESSAGE value="Implemented sauceSelector switch" />
     <MESSAGE value="design stuff" />
     <MESSAGE value="design stuff but ons&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="design stuff but ons&#10;" />
+    <MESSAGE value="dej dnar css&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="dej dnar css&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1593,38 +1602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/pictures/404.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="60" column="97" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/wip_screen..fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1636,28 +1613,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/controllers/SauceSelectorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3845#3846#0" expanded="true" />
-            <element signature="e#3879#3880#0" expanded="true" />
-            <element signature="e#3938#3939#0" expanded="true" />
-            <element signature="e#3972#3973#0" expanded="true" />
-            <element signature="e#4031#4032#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4117#4118#0" expanded="true" />
-            <element signature="e#4151#4152#0" expanded="true" />
+            <element signature="e#3787#3788#0" expanded="true" />
+            <element signature="e#3821#3822#0" expanded="true" />
+            <element signature="e#3880#3881#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#3973#3974#0" expanded="true" />
+            <element signature="e#4007#4008#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4093#4094#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1683,12 +1652,52 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/sauce_selector_screen.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="90" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/IzbirnikMarmelade.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/Splosno.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/ZacetnaStran.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/css/dejdnar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/vic/pancake/piSide/GUI/res/pictures/404.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
