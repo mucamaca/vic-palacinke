@@ -6,6 +6,7 @@ import edu.vic.pancake.piSide.GUI.Screens;
 import edu.vic.pancake.piSide.Main;
 import edu.vic.pancake.piSide.netwerking.ArduinoCommunication;
 import edu.vic.pancake.piSide.netwerking.CodeCollection;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
@@ -64,8 +65,14 @@ public class SauceSelectorController implements ScreenListener{
         System.out.println("Selected sauce #" + sauce);
         //Handle stuff
         if (Main.runningOnPi) {
+            int code;
+            if (sauce == 0){
+                code = CodeCollection.NO_SAUCE_SELECTION;
+            }else {
+                code = CodeCollection.SAUCE_SELECTIONS[sauce - 1];
+            }
             try {
-                ArduinoCommunication.out.write(CodeCollection.SAUCE_SELECTIONS[sauce - 1]);
+                ArduinoCommunication.out.write(code);
                 ArduinoCommunication.out.write(CodeCollection.START_PANCAKE_MAKING);
             } catch (IOException e) {
                 System.err.println("Failed to write sauce selection to Arduino.");
@@ -99,6 +106,11 @@ public class SauceSelectorController implements ScreenListener{
     @FXML
     public void onSauce3Selected(MouseEvent e){
         onSauceSelected(3);
+    }
+
+    @FXML
+    public void ohneFill(ActionEvent e){
+        onSauceSelected(0);
     }
 
     private void setPanelText(BorderPane pane, String text){
