@@ -22,9 +22,41 @@ import java.util.Properties;
 public class SauceSelectorController implements ScreenListener{
     public BorderPane saucePanel1, saucePanel2, saucePanel3;
     private BorderPane [] panes = new BorderPane[3];
+    private Image[] bgImages = new Image[panes.length];
 
     public SauceSelectorController() {
         GuiMain.controllers.put("SauceSelector", this);
+        new Thread(() -> {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException ignored) {}
+            panes[0] = saucePanel1;
+            panes[1] = saucePanel2;
+            panes[2] = saucePanel3;
+            //Populate Text
+            Properties selection = new Properties();
+            try {
+                FileInputStream prefFileInStream = new FileInputStream(new File("Selection.properties"));
+                selection.load(prefFileInStream);
+                prefFileInStream.close();
+            } catch (FileNotFoundException e) {
+                System.err.println("Today's selection file not found!");
+                e.printStackTrace();
+                return;
+            } catch (IOException e) {
+                System.err.println("Error while loading today's selection.");
+                return;
+            }
+            for (int i = 0; i < panes.length; i++){
+                setPanelText(panes[i], selection.getProperty("sauce" + (i + 1)));
+            }
+            for (int i = 1; i < panes.length + 1; i++){
+                String fileName = selection.getProperty("sauce" + i + "Img");
+                File imgFile = new File(fileName);
+                Image bgImage = new Image(imgFile.toURI().toString());
+                bgImages[i-1] = bgImage;
+            }
+        }).start();
     }
 
     private void onSauceSelected(int sauce){
@@ -47,31 +79,8 @@ public class SauceSelectorController implements ScreenListener{
         if (screen == Screens.SELECT_SAUCE){
             //Debug
             System.out.println("Sauce selector created");
-
-            panes[0] = saucePanel1;
-            panes[1] = saucePanel2;
-            panes[2] = saucePanel3;
-            //Populate Text
-            Properties selection = new Properties();
-            try {
-                FileInputStream prefFileInStream = new FileInputStream(new File("Selection.properties"));
-                selection.load(prefFileInStream);
-                prefFileInStream.close();
-            } catch (FileNotFoundException e) {
-                System.err.println("Today's selection file not found!");
-                e.printStackTrace();
-                return;
-            } catch (IOException e) {
-                System.err.println("Error while loading today's selection.");
-                return;
-            }
-            for (int i = 0; i < panes.length; i++){
-                setPanelText(panes[i], selection.getProperty("sauce" + (i + 1)));
-            }
-            for (int i = 1; i < 4; i++){
-                String fileName = selection.getProperty("sauce" + i + "Img");
-                Image bgImage = new Image(fileName);
-                panes[i-1].setBackground(new Background(new BackgroundImage(bgImage, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, null)));
+            for (int i = 1; i < panes.length + 1; i++){
+                panes[i-1].setBackground(new Background(new BackgroundImage(bgImages[i-1], BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, null)));
             }
         }
     }
