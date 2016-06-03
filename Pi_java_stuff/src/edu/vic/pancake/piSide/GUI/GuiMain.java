@@ -26,7 +26,7 @@ public class GuiMain extends Application{
         Parent splashFxml = FXMLLoader.load(getClass().getResource("res/splash_screen.fxml"));
         Parent insertMoneyFxml = FXMLLoader.load(getClass().getResource("res/insert_money_screen.fxml"));
         Parent selectSauceFxml = FXMLLoader.load(getClass().getResource("res/sauce_selector_screen.fxml"));
-        Parent wipFxml = FXMLLoader.load(getClass().getResource("res/wip_screen..fxml"));
+        Parent wipFxml = FXMLLoader.load(getClass().getResource("res/wip_screen.fxml"));
 
         splashScene = new Scene(splashFxml, SCREEN_WIDTH, SCREEN_HEIGHT);
         insertMoneyScene = new Scene(insertMoneyFxml, SCREEN_WIDTH, SCREEN_HEIGHT);

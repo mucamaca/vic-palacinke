@@ -80,7 +80,6 @@ public class SauceSelectorController implements ScreenListener{
                 return;
             }
         }
-        System.out.println("Switching scene to working");
         GuiMain.guiMain.switchScreen(Screens.WORKING);
     }
 
