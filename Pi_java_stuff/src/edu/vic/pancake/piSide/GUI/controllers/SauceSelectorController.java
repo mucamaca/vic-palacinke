@@ -77,8 +77,10 @@ public class SauceSelectorController implements ScreenListener{
             } catch (IOException e) {
                 System.err.println("Failed to write sauce selection to Arduino.");
                 e.printStackTrace();
+                return;
             }
         }
+        GuiMain.guiMain.switchScreen(Screens.WORKING);
     }
 
     @Override
