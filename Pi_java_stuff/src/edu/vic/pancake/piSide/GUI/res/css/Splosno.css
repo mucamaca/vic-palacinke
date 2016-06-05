@@ -1,0 +1,9 @@
+.background {
+    -fx-background-color: #00596F;
+    -fx-opacity: 0.8;
+}
+
+.text {
+    -fx-text-fill: #000000;
+    -fx-font-size: 17px;
+}

@@ -1,0 +1,17 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<FlowPane xmlns:fx="http://javafx.com/fxml" orientation="VERTICAL" styleClass="background"
+          alignment="CENTER" fx:controller="edu.vic.pancake.piSide.GUI.controllers.InsertMoneyController">
+    <stylesheets>
+        <URL value="@css/Splosno.css"/>
+    </stylesheets>
+
+    <Text text="DEJ DNAR!!!!! 1€ če smo natančni.">
+        <font>
+            <Font size="25.0"/>
+        </font>
+    </Text>
+    <Text text="Vstavljeno: "/>
+</FlowPane>
