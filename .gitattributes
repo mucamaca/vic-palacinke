@@ -1,0 +1,2 @@
+*.fxml -linguist-language=java
+*.h -linguist-language=arduino
