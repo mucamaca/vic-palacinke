@@ -23,8 +23,8 @@ void dispense_pancake(){
   static char pancake_index=0;
   pancake_index=1-pancake_index;
   pancake[pancake_index++] = all_steps;
-  dosing_stepper.step(30);
+  dosing_stepper.step(80);
   delay(MASA_PER_PANCAKE * 1000);
-  dosing_stepper.step(-30);
+  dosing_stepper.step(-80);
 }
 
