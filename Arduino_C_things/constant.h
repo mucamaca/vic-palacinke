@@ -20,7 +20,7 @@
 
 //masa-things
 
-#define MASA_PER_PANCAKE 3
+#define MASA_PER_PANCAKE 1
 
 
 // (d)dosing-stuff

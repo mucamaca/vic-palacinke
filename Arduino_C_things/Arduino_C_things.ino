@@ -26,7 +26,7 @@ void setup(){
 }
 
 void loop(){
-  step_trak(&all_steps);
+  /*step_trak(&all_steps);
   int i;
   for(i = 0; i < 2; i++){
     /*switch(all_steps - pancake[i]){
@@ -42,10 +42,12 @@ void loop(){
         write("going to dispense",0,0);
         dispense_pancake();
         break;
-    }*/
+    }
   }
   check_grelci();
   //write("cycle_completed",0,0);
-  
+  */
+  dispense_pancake();
+  delay(2000);
 }
 
