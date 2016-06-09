@@ -20,12 +20,20 @@ char init_ultrasonic(){
   return 0;
 }
 
+void lower(){
+  dosing_stepper.step(-600);
+}
+
+void lift(){
+  dosing_stepper.step(600);
+}
+
 void dispense_pancake(){
   static char pancake_index=0;
   pancake_index= pancake_index%2;
   pancake[pancake_index++] = all_steps;
-  dosing_stepper.step(-600);
+  lower();
   delay(MASA_PER_PANCAKE * 1000);
-  dosing_stepper.step(600);
+  lift();
 }
 

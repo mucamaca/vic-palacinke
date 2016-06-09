@@ -14,8 +14,8 @@
 
 #define TARGET_TEMP 240
 
-#define SPODNJI_GRELEC 46
-#define ZGORNJI_GRELEC 47
+#define SPODNJI_GRELEC 47
+#define ZGORNJI_GRELEC 46
 
 
 //masa-things
