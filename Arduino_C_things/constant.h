@@ -29,10 +29,3 @@
 
 // trak-things
 #define ATTINY_PIN 24
-
-
-#define RAZDALJA_DO_GRELCEV 150// v motor stepih
-#define RAZDALJA_DO_ZVIJANJA 420 // v motor stepih
-#define END_OF_TRAK 600 // v motor stepih
-
-
