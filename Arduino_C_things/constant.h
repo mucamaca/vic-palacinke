@@ -28,8 +28,8 @@
 #define DOSING_DIR_PIN 23
 
 // trak-things
-#define TRAK_PUL_PIN 24
-#define TRAK_DIR_PIN 25
+#define ATTINY_PIN 24
+
 
 #define RAZDALJA_DO_GRELCEV 150// v motor stepih
 #define RAZDALJA_DO_ZVIJANJA 420 // v motor stepih
