@@ -4,6 +4,8 @@
 
 #include "constant.h"
 
+long baking_start;
+bool pancake_found = 0;
 // k33pt4lk1ng4ndn013xpl0d3s
 
 void setup(){
