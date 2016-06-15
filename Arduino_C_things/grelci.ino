@@ -53,7 +53,7 @@ void heat(){
 }
 
 void bake(){
-  is_baking = 1;
+//  is_baking = 1;
 }
 
 

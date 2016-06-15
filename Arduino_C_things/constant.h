@@ -12,7 +12,7 @@
 #define ZGORNJI_THERMO_CS 51
 #define ZGORNJI_THERMO_CLK 53
 
-#define TARGET_TEMP 240
+#define TARGET_TEMP 200
 
 #define SPODNJI_GRELEC 47
 #define ZGORNJI_GRELEC 46
@@ -24,8 +24,8 @@
 
 
 // (d)dosing-stuff
-#define DOSING_PUL_PIN 22
-#define DOSING_DIR_PIN 23
+#define DOSING_PUL_PIN 39
+#define DOSING_DIR_PIN 38
 
 // trak-things
 #define ATTINY_PIN 24
