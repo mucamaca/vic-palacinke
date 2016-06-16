@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="RXTXcomm">
+  <library name="RXTXcommWIn64">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/rxtx4windows64/RXTXcomm.jar!/" />
     </CLASSES>

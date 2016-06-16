@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Enumeration;
 import java.util.TooManyListenersException;
+import java.util.logging.Logger;
 
 /**
  * Class ki skrbi za komunikacijo z Arduinom.
@@ -92,6 +93,7 @@ public class ArduinoCommunication {
                         if (in.read() == HANDSHAKE) {
                             out.write(HANDSHAKE);
                             upNRunnin = true;
+                            Logger.getLogger("Arduino Communication").info("Arduino online");
                         } else {
                             throw new IOException("Wrong handshake.");
                         }
