@@ -29,7 +29,7 @@ public class SauceSelectorController implements ScreenListener{
         GuiMain.controllers.put("SauceSelector", this);
         new Thread(() -> {
             try {
-                Thread.sleep(200);
+                Thread.sleep(5000);
             } catch (InterruptedException ignored) {}
             panes[0] = saucePanel1;
             panes[1] = saucePanel2;
@@ -116,10 +116,14 @@ public class SauceSelectorController implements ScreenListener{
     }
 
     private void setPanelText(BorderPane pane, String text){
-        for (Node node : pane.getChildren()){
-            if (node instanceof Label){
-                ((Label) node).setText(text);
+        if (pane != null) {
+            for (Node node : pane.getChildren()) {
+                if (node instanceof Label) {
+                    ((Label) node).setText(text);
+                }
             }
+        }else {
+            System.out.println("Error: pane is null");
         }
     }
 }

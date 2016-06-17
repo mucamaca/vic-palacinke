@@ -24,6 +24,7 @@ public class WipScreenController implements ScreenListener{
                         updateProgress(i, STEPS);
                         Thread.sleep(1000);
                     }
+                    System.exit(1);
                     return null;
                 }
             };

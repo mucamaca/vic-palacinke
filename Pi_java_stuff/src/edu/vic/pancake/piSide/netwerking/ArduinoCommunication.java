@@ -20,7 +20,7 @@ public class ArduinoCommunication {
     public static OutputStream out;
     public static InputStream in;
 
-    private static final String PORT = "";
+    private static final String PORT = "/dev/ttyACM0";
     private static final int BAUD_RATE = 9600;
     private static boolean upNRunnin = false;
     private static SerialPort serialPort;
@@ -30,14 +30,16 @@ public class ArduinoCommunication {
             //Poišči port
             CommPortIdentifier portId = null;
             Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
+            System.out.println("Iščem porte...");
             while (portEnum.hasMoreElements()) {
                 CommPortIdentifier currentPortId = (CommPortIdentifier) portEnum.nextElement();
+                System.out.println(currentPortId.getName());
                 if (currentPortId.getName().equals(PORT)) {
                     portId = currentPortId;
                 }
             }
             //Preveri če smo dejansko našli port
-            if (portId != null) {
+            if (portId == null) {
                 System.err.println("Port " + PORT + " ni najden.");
                 System.exit(-1);
             }
