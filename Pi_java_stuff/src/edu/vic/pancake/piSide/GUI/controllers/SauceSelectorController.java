@@ -29,7 +29,7 @@ public class SauceSelectorController implements ScreenListener{
         GuiMain.controllers.put("SauceSelector", this);
         new Thread(() -> {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(200);
             } catch (InterruptedException ignored) {}
             panes[0] = saucePanel1;
             panes[1] = saucePanel2;

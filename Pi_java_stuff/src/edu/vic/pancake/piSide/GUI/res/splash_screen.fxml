@@ -8,5 +8,5 @@
         <URL value="@css/ZacetnaStran.css" />
         <URL value="@css/Splosno.css"/>
     </stylesheets>
-    <Text text="PfankuchenMacher9000" styleClass="name"/>
+    <Text text="Palačinkomat9000" styleClass="name"/>
 </FlowPane>
