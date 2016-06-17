@@ -14,7 +14,7 @@ char comm_check(){
   Serial.write(HANDSHAKE);
   //Počaka da je kaj za brat
   while(!Serial.available()){
-    delay(10);
+    delay(100);
   }
   if(Serial.read() != HANDSHAKE)
     return 42;
@@ -44,14 +44,15 @@ char error_write(char errno){
   if(errno){
     Serial.write(errno / 100 + '0');
     Serial.write(errno % 10 + '0');
-  }else{
-    success_write();
-  }
+  }else
+    Serial.write(0);
   return errno;
 }
 
-char success_write(){
-  Serial.write(0);
-  return 0;
+char read(){
+  if(Serial.available())
+    return Serial.read();
+  else
+    return 0;
 }
 
