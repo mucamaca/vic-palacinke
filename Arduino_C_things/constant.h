@@ -12,20 +12,17 @@
 #define ZGORNJI_THERMO_CS 51
 #define ZGORNJI_THERMO_CLK 53
 
-#define TARGET_TEMP 200
+#define SPODNJI_TARGET_TEMP 240
+#define ZGORNJI_TARGET_TEMP 280
 
 #define SPODNJI_GRELEC 47
 #define ZGORNJI_GRELEC 46
 
-
-//masa-things
-
-#define MASA_PER_PANCAKE 1
-
-
-// (d)dosing-stuff
+// dosing-stuff
 #define DOSING_PUL_PIN 39
 #define DOSING_DIR_PIN 38
+#define DOSING_ENA_PIN 37
 
 // trak-things
 #define ATTINY_PIN 24
+#define TRAK_ENA_PIN 23

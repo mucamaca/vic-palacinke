@@ -1,58 +1,63 @@
 /**
- * funkcije za komunikacijo z RPi-jem
+ * funkcije za komunikacijo z RPi-jem in interpretacijo errorjev
  */
 
 
-char comm_init(){
+void comm_init(uint64_t *error_bit_mask)
+{
   Serial.begin(9600);
-  return comm_check();
+  comm_check(error_bit_mask);
 }
 
-#define HANDSHAKE 42
 
-char comm_check(){
-  Serial.write(HANDSHAKE);
-  //Počaka da je kaj za brat
-  while(!Serial.available()){
+void comm_check(*error_bit_mask)
+{
+  Serial.write(42); // handshake
+
+  char i;
+  for(i = 0; i < 20 && !Serial.available(); i++)
     delay(100);
-  }
-  if(Serial.read() != HANDSHAKE)
-    return 42;
-  else
-    return 0;
-}
 
-#undef HANDSHAKE 
+  if(i == 20)
+    *error_bit_mask |= HANDSHAKE_TIMED_OUT;
+  else if(Serial.read() != 42) // handshake
+    *error_bit_mask |= WRONG_HANDSHAKE;
+}
 
  
-void write(const char message[127], bool init, bool warning){
-  Serial.write(127);
+void write(const char *message, bool init, bool warning)
+{
   if(init)
     Serial.write("[Init]");
   if(warning)
-    Serial.write("[Warning]:");
+    Serial.write("[Warning]");
   else
-    Serial.write("[Info]:");
-  int i;
-  for(i = 0; i < strlen(message); i++){
-    Serial.write(message[i]);
-  }
+    Serial.write("[Info]");
+  Serial.write(':');
+  Serial.write(message);
   Serial.write('\n');
 }
- 
-char error_write(char errno){
-  if(errno){
-    Serial.write(errno / 100 + '0');
-    Serial.write(errno % 10 + '0');
-  }else
-    Serial.write(0);
-  return errno;
+
+void error_write(uint64_t *error_bit_mask)
+{
+  Serial.write(0);
+  Serial.print(*error_bit_mask);
 }
 
-char read(){
+short read()
+{
   if(Serial.available())
     return Serial.read();
   else
-    return 0;
+    return -1;
 }
 
+void make_use_of_errors(uint64_t *error_bit_mask)
+{
+  //TODO
+}
+
+void clear_error_bit_mask(uint64_t *error_bit_mask)
+{
+  memset(error_bit_mask, 0, 8);
+}
