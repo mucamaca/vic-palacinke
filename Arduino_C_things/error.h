@@ -1,19 +1,19 @@
-#define ULTRASONIC_ERROR 1<<0 
+#define ULTRASONIC_ERROR 1
 // 1
 
-#define MASA_ERROR 1<<1 
+#define MASA_ERROR 2
 // 2
 
-#define ZGORNJI_THERMOCOUPLE_ERROR 1<<2
+#define ZGORNJI_THERMOCOUPLE_ERROR 4
 //4
 
-#define SPODNJI_THERMOCOUPLE_ERROR 1<<3
+#define SPODNJI_THERMOCOUPLE_ERROR 8
 //8
 
-#define HANDSHAKE_TIMED_OUT 1<<4
+#define HANDSHAKE_TIMED_OUT 16
 //16
 
-#define WRONG_HANDSHAKE 1<<5
+#define WRONG_HANDSHAKE 32
 //32
 
-uint64_t error_bit_mask = 0;
+uint64_t *error_bit_mask;

@@ -2,28 +2,32 @@
  * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen.
  */
 
+#include "error.h"
 #include "constant.h"
 
-int lpp_count = 0;
+bool trak_moving = 0;
 
-void setup(){
+void setup()
+{
   //while(comm_init())
     delay(400);
   Serial.begin(9600);
-  grelci_init();
-  write("grelci init",1,0);
-  trak_init();
-  write("trak init", 1, 0);
-  masa_init();
-  write("masa init",1, 0);
+  error_bit_mask = (uint64_t *) malloc(8);
+  grelci_init(error_bit_mask);
+  write("grelci OK",1,0);
+ // trak_init();
+  write("trak OK", 1, 0);
+ // masa_init();
+  write("masa OK",1, 0);
   heat();
   write("SEGRETO", 1,0);
 }
 
 void loop()
 {
-  ++lpp_count;
-  check_grelci();
+  check_grelci(error_bit_mask);
+  
   digitalWrite(ATTINY_PIN, trak_moving);
+  delay(100);
 }
 

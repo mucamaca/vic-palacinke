@@ -9,40 +9,41 @@
 static MAX6675 spodnji_thermocouple(SPODNJI_THERMO_CLK, SPODNJI_THERMO_CS, SPODNJI_THERMO_DO);
 static MAX6675 zgornji_thermocouple(ZGORNJI_THERMO_CLK, ZGORNJI_THERMO_CS, ZGORNJI_THERMO_DO);
 
-static struct temperature_measurement{
+
+struct mow{
   long time;
   float spodnji;
   float zgornji;
 };
 
-static struct temperature_measurement *mes = {
-  .time = 0;
-  .spodnji = -1;
-  .zgornji = -1;
-}
+static struct mow mes;
 
-static void update(struct temperature_measuremet *mes)
+
+static void update(void)
 {
-  if(millis() - mes->time > 1000){
-    mes->zgornji = zgornji_thermocouple.readCelsius();
-    mes->spodnji = spodnji_thermocouple.readCelsius();
-    mes->time = millis();
+  if(millis() - mes.time > 1000){
+    mes.zgornji = zgornji_thermocouple.readCelsius();
+    mes.spodnji = spodnji_thermocouple.readCelsius();
+    mes.time = millis();
   }
 }
 
 
 static void check_for_error(uint64_t *error_bit_mask)
 {
-  update(mes);
-  if( (int) mes->zgornji == 0 || mes->zgornji == NAN)
+  if( (int) mes.zgornji == 0 || mes.zgornji == NAN)
     *error_bit_mask |= ZGORNJI_THERMOCOUPLE_ERROR;
-  if( (int) mes->spodnji == 0 || mes->spodnji == NAN)
+  if( (int) mes.spodnji == 0 || mes.spodnji == NAN)
     *error_bit_mask |= SPODNJI_THERMOCOUPLE_ERROR;
 }
 
 
 void grelci_init(uint64_t *error_bit_mask)
 {
+  mes.spodnji = -1;
+  mes.zgornji = -1;
+
+  update();
   check_for_error(&error_bit_mask);
   
   pinMode(SPODNJI_GRELEC, OUTPUT);
@@ -55,6 +56,7 @@ void grelci_init(uint64_t *error_bit_mask)
 
 void check_grelci(uint64_t *error_bit_mask)
 {
+  update();
   check_for_error(&error_bit_mask);  
 
   if( (int) zgornji_thermocouple.readCelsius() < ZGORNJI_TARGET_TEMP)
@@ -98,7 +100,7 @@ void heat()
     delay(1000);
     
     Serial.print(map(spodnji[i], 23, SPODNJI_TARGET_TEMP, 1, 100) );
-    Serial.println(' %');
+    Serial.println(" %");
     
     ++i %= 3;
   
