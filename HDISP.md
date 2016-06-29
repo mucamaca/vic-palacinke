@@ -1,6 +1,6 @@
 # Hurr durr i'm a sheep protokol
 
-HDImaSP (Hurr Durr I'm a Sheep Protocol) je protokol, ki ga od jutri ob 
+HDISP (Hurr Durr I'm a Sheep Protocol) je protokol, ki ga od jutri ob 
 dveh popoldne uporabljamo za komunikacijo med Raspberry 
 Pi skatlo z user interfacom in Arduinom. Gre pa nekako tkole:
 Od arduina na Pi
