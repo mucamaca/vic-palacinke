@@ -44,7 +44,7 @@ void grelci_init(uint64_t *error_bit_mask)
   mes.zgornji = -1;
 
   update();
-  check_for_error(&error_bit_mask);
+  check_for_error(error_bit_mask);
   
   pinMode(SPODNJI_GRELEC, OUTPUT);
   pinMode(ZGORNJI_GRELEC, OUTPUT);
@@ -57,7 +57,7 @@ void grelci_init(uint64_t *error_bit_mask)
 void check_grelci(uint64_t *error_bit_mask)
 {
   update();
-  check_for_error(&error_bit_mask);  
+  check_for_error(error_bit_mask);  
 
   if( (int) zgornji_thermocouple.readCelsius() < ZGORNJI_TARGET_TEMP)
     digitalWrite(ZGORNJI_GRELEC, 1);
@@ -74,15 +74,15 @@ void check_grelci(uint64_t *error_bit_mask)
 
 int read_temperature_zgornji()
 {
-  update(mes);
-  return (int) mes->spodnji;
+  update();
+  return (int) mes.spodnji;
 }
 
 
 int read_temperature_spodnji()
 {
-  update(mes);
-  return (int) mes->spodnji;
+   update();
+  return (int) mes.spodnji;
 }
 
 

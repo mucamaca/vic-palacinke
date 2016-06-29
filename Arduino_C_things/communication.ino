@@ -43,7 +43,7 @@ void error_write(uint64_t *error_bit_mask)
   Serial.write(0);
   char i, *foo;
   for(foo = (char *) error_bit_mask, i = 0; i < 4; i++)
-    write(foo);
+    Serial.write(foo);
 }
 
 short read()
