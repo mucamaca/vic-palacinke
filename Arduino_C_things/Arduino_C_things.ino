@@ -1,9 +1,10 @@
 /**
  * main file brez main funkcije, ker je arduino DDE (Disintegrated Development Environment) neumen.
  */
-
-#include "error.h"
+ 
 #include "constant.h"
+#include "error.h"
+
 
 bool trak_moving = 0;
 

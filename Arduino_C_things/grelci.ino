@@ -81,30 +81,24 @@ int read_temperature_zgornji()
 
 int read_temperature_spodnji()
 {
-   update();
+  update();
   return (int) mes.spodnji;
 }
 
 
 void heat()
 {
-  char i = 0;
-  short spodnji[] = {0, 0, 0};
-
   digitalWrite(ZGORNJI_GRELEC, 1);
   digitalWrite(SPODNJI_GRELEC, 1);
-
-  do{
-    spodnji[i] = (int) spodnji_thermocouple.readCelsius();
-
-    delay(1000);
-    
-    Serial.print(map(spodnji[i], 23, SPODNJI_TARGET_TEMP, 1, 100) );
-    Serial.println(" %");
-    
-    ++i %= 3;
   
-  }while( (spodnji[0] + spodnji[1] + spodnji[2]) / 3 < SPODNJI_TARGET_TEMP);
+  do{
+    mes.spodnji = spodnji_thermocouple.readCelsius();  
+    delay(1001);
+    
+    Serial.print(mes.spodnji);//map(spodnji[i], SPODNJI_TARGET_TEMP, 23, 1, 100) );
+    Serial.println(" %");
+  
+  }while( mes.spodnji < SPODNJI_TARGET_TEMP);
   
   digitalWrite(ZGORNJI_GRELEC, 0);
   digitalWrite(SPODNJI_GRELEC, 0);
