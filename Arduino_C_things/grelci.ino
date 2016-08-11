@@ -72,33 +72,34 @@ void check_grelci(uint64_t *error_bit_mask)
 }
 
 
-int read_temperature_zgornji()
+int read_temperature_zgornji(void)
 {
   update();
   return (int) mes.spodnji;
 }
 
 
-int read_temperature_spodnji()
+int read_temperature_spodnji(void)
 {
   update();
   return (int) mes.spodnji;
 }
 
 
-void heat()
+void heat(void)
 {
   digitalWrite(ZGORNJI_GRELEC, 1);
   digitalWrite(SPODNJI_GRELEC, 1);
   
   do{
     mes.spodnji = spodnji_thermocouple.readCelsius();  
-    delay(1001);
+    delay(1000);
     
-    Serial.print(mes.spodnji);//map(spodnji[i], SPODNJI_TARGET_TEMP, 23, 1, 100) );
-    Serial.println(" %");
+    Serial.print(mes.spodnji);
+    //Serial.println(" %"); // izpise procentualno kolksen delez temperature je dosezen
+    //TODO - naredi da bo izpisalo tudi izracun casa, ki ga bo rabil, da pride do ta prave temperature
   
-  }while( mes.spodnji < SPODNJI_TARGET_TEMP);
+  }while(mes.spodnji < SPODNJI_TARGET_TEMP);
   
   digitalWrite(ZGORNJI_GRELEC, 0);
   digitalWrite(SPODNJI_GRELEC, 0);
