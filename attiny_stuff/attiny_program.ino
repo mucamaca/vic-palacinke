@@ -13,4 +13,6 @@ void setup() {
 void loop() {
   if(digitalRead(2))
     stepper.step(5);
+  else
+    stepper.step(-5);
 }
