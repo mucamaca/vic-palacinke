@@ -1,8 +1,3 @@
-# Hurr durr i'm a sheep protokol
-
-HDISP (Hurr Durr I'm a Sheep Protocol) je protokol, ki ga od jutri ob 
-dveh popoldne uporabljamo za komunikacijo med Raspberry 
-Pi skatlo z user interfacom in Arduinom. Gre pa nekako tkole:
 Od arduina na Pi
 - informacije prehajajo kot:
   - paketki po 8 B
