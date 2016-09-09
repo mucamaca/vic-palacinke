@@ -4,13 +4,13 @@
 
 
 // grelci-stuff 
-#define SPODNJI_THERMO_DO 
-#define SPODNJI_THERMO_CS 
-#define SPODNJI_THERMO_CLK 
+#define SPODNJI_THERMO_DO 2
+#define SPODNJI_THERMO_CS 4
+#define SPODNJI_THERMO_CLK 3
 
-#define ZGORNJI_THERMO_DO 
-#define ZGORNJI_THERMO_CS 
-#define ZGORNJI_THERMO_CLK 
+#define ZGORNJI_THERMO_DO 32
+#define ZGORNJI_THERMO_CS 46
+#define ZGORNJI_THERMO_CLK 45
 
 #define SPODNJI_TARGET_TEMP 250
 #define ZGORNJI_TARGET_TEMP 270
@@ -19,10 +19,10 @@
 #define ZGORNJI_GRELEC 46
 
 // dosing-stuff
-#define DOSING_PUL_PIN 39
-#define DOSING_DIR_PIN 38
-#define DOSING_ENA_PIN 37
+#define DOSING_PUL_PIN 52
+#define DOSING_DIR_PIN 53
+#define DOSING_ENA_PIN 51
 
 // trak-things
-#define ATTINY_PIN 24
-#define TRAK_ENA_PIN 23
+#define ATTINY_PIN 6
+#define TRAK_ENA_PIN 5

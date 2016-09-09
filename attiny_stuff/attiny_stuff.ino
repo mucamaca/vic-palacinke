@@ -1,4 +1,4 @@
-/*
+/**
  * Koda je napisana za attiny85
  */
 
@@ -9,13 +9,28 @@
 
 Stepper stepper(400, STEPPER_PUL, STEPPER_DIR);
 
+bool last_read = true;
+
 void setup() {
   pinMode(FROM_ARDUINO_PIN, INPUT);
 }
 
 void loop() {
-  if(digitalRead(FROM_ARDUINO_PIN))
-    stepper.step(5);
-  else
-    stepper.step(-5);
+  bool rd = digitalRead(FROM_ARDUINO_PIN);
+  if(rd){
+    if(rd == last_read){
+      stepper.step(5);  
+    }else{
+      delay(50);
+      last_read = rd;
+    }
+    
+  }else{
+    if(rd == last_read){
+      stepper.step(-5);  
+    }else{
+      delay(50);
+      last_read = rd;
+    }
+  }
 }
