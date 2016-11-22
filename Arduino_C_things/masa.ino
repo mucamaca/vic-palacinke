@@ -15,12 +15,6 @@ char check_masa(void)
 }
 
 
-bool init_ultrasonic(void)
-{
-  return 1;
-}
-
-
 void masa_init(void)
 {
   dosing_stepper.setSpeed(2);
@@ -31,7 +25,7 @@ void masa_init(void)
     *error_bit_mask |= MASA_ERROR; 
 }
 
-void stupid(void)
+void move(void)
 {
   int i;
   digitalWrite(DOSING_ENA_PIN,1);

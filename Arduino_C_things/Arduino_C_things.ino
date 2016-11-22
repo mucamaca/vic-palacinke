@@ -16,14 +16,10 @@ void setup()
   Serial.begin(9600);
   //error_bit_mask = (uint64_t *) malloc(sizeof(uint64_t));
 
-  //grelci_init(error_bit_mask);
-  write("grelci OK",1,0);
   trak_init();
   write("trak OK", 1, 0);
   // masa_init();
   write("masa OK",1, 0);
-  //heat();
-  write("SEGRETO", 1,0);
   
 }
 
@@ -31,7 +27,6 @@ void loop()
 {
   //check_grelci(error_bit_mask);
   
-  //stupid();
   delay(800);
 }
 
