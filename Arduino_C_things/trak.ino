@@ -2,23 +2,20 @@
  * File s funkcijami za nadzor nad premikanjem traka.
  */
 
-static char dir = 1;
+#include <Stepper.h>
 
+static Stepper trak_stepper(800, TRAK_PUL_PIN, TRAK_DIR_PIN);
 
-void trak_start(void)
+void trak_init()
 {
-  digitalWrite(ATTINY_PIN, 0);
+  //trak_stepper.setSpeed(2);
 }
 
-void trak_stop(void)
+void trak_move()
 {
-  digitalWrite(ATTINY_PIN, 1);
+  int i;
+  for(i=0;i<200;i++){
+    trak_stepper.step(-1);
+    delay(1);
+  }
 }
-
-void trak_init(void)
-{
-  pinMode(ATTINY_PIN, OUTPUT);
-  pinMode(TRAK_ENA_PIN, OUTPUT);
-  digitalWrite(ATTINY_PIN, 0);
-}
-
