@@ -26,10 +26,9 @@ void setup()
 
 void loop()
 {
-  //check_grelci(error_bit_mask);
-  trak_move();
-  //trak_start();
-  delay(800);
-  //trak_stop();
+  move(100);
+  delay(100);
+  trak_move(500);
+  delay(100);
 }
 

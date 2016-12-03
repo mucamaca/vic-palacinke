@@ -11,10 +11,10 @@ void trak_init()
   //trak_stepper.setSpeed(2);
 }
 
-void trak_move()
+void trak_move(int meow)
 {
   int i;
-  for(i=0;i<200;i++){
+  for(i=0;i<meow;i++){
     trak_stepper.step(-1);
     delay(1);
   }
