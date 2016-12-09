@@ -25,9 +25,9 @@ void setup()
 
 void loop()
 {
-  nalij(100);
+  //nalij(100);
   delay(100);
-  trak_move(500);
-  delay(100);
+  trak_move(RAZDALJA_MED_GRELCI);
+  delay(5000);
 }
 

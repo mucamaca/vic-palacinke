@@ -15,8 +15,7 @@
 #define TRAK_ENA_PIN 14
 
 // step-lengths
-#define RAZDALJA_MED_GRELCI 1
-#define RAZDALJA_MED_GRELCEM2_IN_KONCEM 1
+#define RAZDALJA_MED_GRELCI 18000
 
 // cooking-times
 #define KUHANJE_SPODAJ 45
