@@ -15,16 +15,15 @@ void masa_init(void)
   //pinMode(DOSING_ENA_PIN, OUTPUT);
 }
 
-void move(int meow)
-{
+void nalij(int steps){
   int i;
   //digitalWrite(DOSING_ENA_PIN,1);
-  for(i=0;i<meow/2;i++){
+  for(i=0;i<steps/2;i++){
     dosing_stepper.step(2);
     delay(1);
   }
   delay(800);
-  for(i=0;i<meow/2;i++){
+  for(i=0;i<steps/2;i++){
     dosing_stepper.step(-2);
     delay(1);
   }

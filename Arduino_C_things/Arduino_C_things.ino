@@ -25,7 +25,7 @@ void setup()
 
 void loop()
 {
-  move(100);
+  nalij(100);
   delay(100);
   trak_move(500);
   delay(100);
