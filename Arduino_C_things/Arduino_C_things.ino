@@ -19,7 +19,6 @@ void setup()
   digitalWrite(STEPPER_5V_PIN, HIGH);
   write("trak OK", 1, 0);
   // masa_init();
-  trak_init();
   write("masa OK",1, 0);
   
 }
