@@ -15,16 +15,33 @@ void masa_init(void)
   //pinMode(DOSING_ENA_PIN, OUTPUT);
 }
 
-void nalij(int steps){
-  int i;
-  //digitalWrite(DOSING_ENA_PIN,1);
-  for(i=0;i<steps/2;i++){
-    dosing_stepper.step(2);
+int nalij(int steps)
+{
+  int i, mil;
+#ifdef DBG
+  
+  while(!Serial.available())
     delay(1);
-  }
-  delay(800);
+  Serial.read();
+#endif
+  //digitalWrite(DOSING_ENA_PIN,1);
   for(i=0;i<steps/2;i++){
     dosing_stepper.step(-2);
     delay(1);
   }
+#ifdef DBG
+  mil=millis();
+  while(!Serial.available())
+    delay(1);
+  mil=millis()-mil;
+  Serial.read();
+#else
+  delay(DOZIRANJE_CAJT * 1000);
+  mil=DOZIRANJE_CAJT * 1000;
+#endif  
+  for(i=0;i<steps/2;i++){
+    dosing_stepper.step(2);
+    delay(1);
+  }
+  return mil;
 }

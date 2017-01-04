@@ -4,7 +4,7 @@
  
 #include "constant.h"
 #include "error.h"
-
+#define DBG
 
 char trak_moving = 0;
 
@@ -25,9 +25,8 @@ void setup()
 
 void loop()
 {
-  //nalij(100);
-  delay(100);
-  trak_move(RAZDALJA_MED_GRELCI);
-  delay(5000);
+  trak_move;
+  write("Nalij!", 0, 0);
+  //Serial.println(nalij(DOZIRANJE_STEP)); 
 }
 
