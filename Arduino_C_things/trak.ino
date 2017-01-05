@@ -7,10 +7,9 @@
 static Stepper trak_stepper(800, TRAK_PUL_PIN, TRAK_DIR_PIN);
 
 void trak_move(int steps){
-  int i, mili_remainder, integer_part;
-  float float_part, steps_per_second = RAZDALJA_MED_GRELCI / BAKE_TIME; 
-  integer_part = (int) steps_per_second
-  mili_remainder = millis();
-  
-  
+  int i; 
+  for(i=0;i<RAZDALJA_MED_GRELCI;i++){
+    trak_stepper.step(1);
+    delay(16+(i%3 && 1));
+  }  
 }
