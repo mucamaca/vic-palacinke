@@ -20,9 +20,9 @@ int nalij(int steps)
   int i, mil;
 #ifdef DBG
   
-  while(!Serial.available())
+  /*while(!Serial.available())
     delay(1);
-  Serial.read();
+  Serial.read();*/
 #endif
   //digitalWrite(DOSING_ENA_PIN,1);
   for(i=0;i<steps/2;i++){
