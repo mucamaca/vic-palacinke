@@ -8,6 +8,25 @@
 
 static Stepper dosing_stepper(80000, DOSING_PUL_PIN, DOSING_DIR_PIN);
 
+int t_ime(){
+  int mil;
+  while(!Serial.available())
+    delay(1);
+  Serial.read();
+  mil=millis();
+  while(!Serial.available())
+    delay(1);
+  mil=millis()-mil;
+  Serial.read();
+  return mil;
+}
+
+void calibrate(){
+  int t, v;
+  t=t_ime();
+//  v=parse_volume();
+  //do_some_stuff
+}
 
 void masa_init(void)
 {
@@ -20,9 +39,9 @@ int nalij(int steps)
   int i, mil;
 #ifdef DBG
   
-  /*while(!Serial.available())
+  while(!Serial.available())
     delay(1);
-  Serial.read();*/
+  Serial.read();
 #endif
   //digitalWrite(DOSING_ENA_PIN,1);
   for(i=0;i<steps/2;i++){
