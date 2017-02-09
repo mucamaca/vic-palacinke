@@ -11,6 +11,7 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(STEPPER_5V_PIN, OUTPUT);
+  
   digitalWrite(STEPPER_5V_PIN, HIGH);
 }
 
