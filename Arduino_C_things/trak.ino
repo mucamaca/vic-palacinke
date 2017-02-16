@@ -10,6 +10,8 @@ void trak_test(){trak_stepper.step(-200);}
 
 void trak_move(){
   int i;
+  //digitalWrite(TRAK_ENA_PIN,1);
+  delay(200);
   for(i=0;i<RAZDALJA_MED_GRELCI/2;i++){
     trak_stepper.step(-2);
     delay(1);

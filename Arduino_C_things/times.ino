@@ -147,4 +147,105 @@
 
 
 
+1     Nalij!
+2973
+2     Nalij!
+4215
+3     Nalij!
+5391
+4     Nalij!
+1390
+5     Nalij!
+1694
+6     Nalij!
+1890
+7     Nalij!
+2131
+8     Nalij!
+2559
+9     Nalij!
+8855
+10     Nalij!
+2569
+11     Nalij!
+878
+12     Nalij!
+3983
+13     Nalij!
+5181
+
+1     Nalij!
+
+2173
+
+2     Nalij!
+
+2297
+
+3     Nalij!
+
+2484
+
+4     Nalij!
+
+2407
+
+5     Nalij!
+
+1531
+
+6     Nalij!
+
+2126
+
+7     Nalij!
+
+10611
+
+8     Nalij!
+
+2011
+
+9     Nalij!
+
+3441
+
+10     Nalij!
+
+4069
+
+11     Nalij!
+
+6306
+
+12     Nalij!
+
+14691
+
+13     Nalij!
+
+1337
+
+14     Nalij!
+
+1140
+
+15     Nalij!
+
+2275
+
+16     Nalij!
+
+1347
+
+17     Nalij!
+
+1637
+
+18     Nalij!
+
+7655
+
+
+
 */

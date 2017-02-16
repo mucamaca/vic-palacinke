@@ -9,6 +9,8 @@ char trak_moving = 0;
 
 void setup()
 {
+  pinMode(DOSING_ENA_PIN, OUTPUT);
+  pinMode(TRAK_ENA_PIN,OUTPUT);
   Serial.begin(9600);
   pinMode(STEPPER_5V_PIN, OUTPUT);
   
@@ -18,6 +20,8 @@ void setup()
 int co=1;
 void loop()
 {
+  
+  digitalWrite(DOSING_ENA_PIN, 0);
   static int i=0;
   Serial.print(co++);
   Serial.println("     Nalij!");

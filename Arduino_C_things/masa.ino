@@ -36,6 +36,7 @@ void masa_init(void)
 
 int nalij(int steps)
 {
+  digitalWrite(DOSING_ENA_PIN,1);
   int i, mil;
 #ifdef DBG
   
@@ -43,9 +44,8 @@ int nalij(int steps)
     delay(1);
   Serial.read();
 #endif
-  //digitalWrite(DOSING_ENA_PIN,1);
   for(i=0;i<steps/2;i++){
-    dosing_stepper.step(-2);
+    dosing_stepper.step(2);
     delay(1);
   }
 #ifdef DBG
@@ -59,8 +59,10 @@ int nalij(int steps)
   mil=DOZIRANJE_CAJT * 1000;
 #endif  
   for(i=0;i<steps/2;i++){
-    dosing_stepper.step(2);
+    dosing_stepper.step(-2);
     delay(1);
   }
+  delay(50);
+  digitalWrite(DOSING_ENA_PIN,0);
   return mil;
 }
