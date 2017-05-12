@@ -16,7 +16,7 @@
 
 // step-lengths
 #define RAZDALJA_MED_GRELCI 18000
-#define DOZIRANJE_STEP 350
+#define DOZIRANJE_STEP 400
 
 
 // cooking-times

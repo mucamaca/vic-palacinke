@@ -13,8 +13,10 @@ void setup()
   pinMode(TRAK_ENA_PIN,OUTPUT);
   Serial.begin(9600);
   pinMode(STEPPER_5V_PIN, OUTPUT);
-  
+Serial.println("MJau");  
   digitalWrite(STEPPER_5V_PIN, HIGH);
+  
+  
 }
 
 int co=1;
@@ -25,7 +27,7 @@ void loop()
   static int i=0;
   Serial.print(co++);
   Serial.println("     Nalij!");
-  Serial.println(nalij(DOZIRANJE_STEP));
+  //Serial.println(nalij(DOZIRANJE_STEP));
   for (i=0;i<10;i++)
     delay(100*BAKE_TIME);
   trak_move();

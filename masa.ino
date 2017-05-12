@@ -28,15 +28,17 @@ void calibrate(){
   //do_some_stuff
 }
 
-void masa_init(void)
-{
-  //dosing_stepper.setSpeed(2);
-  //pinMode(DOSING_ENA_PIN, OUTPUT);
+void enable_dosing(){
+  digitalWrite(DOSING_ENA_PIN,1);
+}
+
+void disable_dosing(){
+  digitalWrite(DOSING_ENA_PIN,0);
 }
 
 int nalij(int steps)
 {
-  digitalWrite(DOSING_ENA_PIN,1);
+  enable_dosing();
   int i, mil;
 #ifdef DBG
   
@@ -45,7 +47,7 @@ int nalij(int steps)
   Serial.read();
 #endif
   for(i=0;i<steps/2;i++){
-    dosing_stepper.step(2);
+    dosing_stepper.step(-2);
     delay(1);
   }
 #ifdef DBG
@@ -59,10 +61,10 @@ int nalij(int steps)
   mil=DOZIRANJE_CAJT * 1000;
 #endif  
   for(i=0;i<steps/2;i++){
-    dosing_stepper.step(-2);
+    dosing_stepper.step(2);
     delay(1);
   }
   delay(50);
-  digitalWrite(DOSING_ENA_PIN,0);
+  disable_dosing();
   return mil;
 }

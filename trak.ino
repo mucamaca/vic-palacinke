@@ -8,13 +8,24 @@ static Stepper trak_stepper(800, TRAK_PUL_PIN, TRAK_DIR_PIN);
 
 void trak_test(){trak_stepper.step(-200);}
 
+void enable_trak(){
+  digitalWrite(TRAK_ENA_PIN,1);
+}
+
+void disable_trak(){
+  digitalWrite(TRAK_ENA_PIN,0);
+}
+
 void trak_move(){
   int i;
   //digitalWrite(TRAK_ENA_PIN,1);
+  enable_trak();
   delay(200);
   for(i=0;i<RAZDALJA_MED_GRELCI/2;i++){
     trak_stepper.step(-2);
     delay(1);
   }  
+  delay(100);
+  disable_trak();
   
 }
