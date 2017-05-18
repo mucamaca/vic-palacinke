@@ -4,6 +4,12 @@
 
 #define STEPPER_5V_PIN 20
 
+#define HEATING_PIN_0 14
+#define HEATING_PIN_1 15
+
+#define THERMO_INPUT_0 8
+#define THERMO_INPUT_1 10
+
 // dosing-stuff
 #define DOSING_PUL_PIN 19
 #define DOSING_DIR_PIN 18
@@ -18,6 +24,7 @@
 #define RAZDALJA_MED_GRELCI 18000
 #define DOZIRANJE_STEP 400
 
+#define DOZIRANJE_CAJT 3
 
 // cooking-times
-#define BAKE_TIME 89
+#define BAKE_TIME 90
