@@ -8,52 +8,22 @@
 
 Stepper dosing_stepper(80000, DOSING_PUL_PIN, DOSING_DIR_PIN);
 
-int t_ime(){
-  int mil;
-  while(!Serial.available())
-    delay(1);
-  Serial.read();
-  mil=millis();
-  while(!Serial.available())
-    delay(1);
-  mil=millis()-mil;
-  Serial.read();
-  return mil;
-}
-
-void calibrate(){
-  int t, v;
-  t=t_ime();
-//  v=parse_volume();
-  //do_some_stuff
-}
-
-void disable_heating(){
-  digitalWrite(HEATING_PIN_0, 0);
-  digitalWrite(HEATING_PIN_1, 0);
-}
-
-void heat(){
-  if(digitalRead(THERMO_INPUT_0))
-    digitalWrite(HEATING_PIN_0,1);
-  if(digitalRead(THERMO_INPUT_1))
-    digitalWrite(HEATING_PIN_1,1);
-  
-}
-
-void enable_dosing(){
-  disable_heating();
+void dosing_enable(){
   digitalWrite(DOSING_ENA_PIN,1);
 }
 
-void disable_dosing(){
-  heat();
+void dosing_disable(){
   digitalWrite(DOSING_ENA_PIN,0);
+}
+
+void dosing_setup(){
+  pinMode(DOSING_ENA_PIN, OUTPUT);
+  dosing_disable();
 }
 
 int nalij(int steps)
 {
-  enable_dosing();
+  dosing_enable();
   int i, mil;
   Serial.println("sajdfs");
   
@@ -75,6 +45,6 @@ int nalij(int steps)
     delay(1);
   }
   delay(50);
-  disable_dosing();
+  dosing_disable();
   return mil;
 }
