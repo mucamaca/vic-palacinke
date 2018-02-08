@@ -24,4 +24,4 @@
 #define DOZIRANJE_CAJT 3
 
 // baaking-times
-#define BAKE_TIME 90L
+#define BAKE_TIME 9L

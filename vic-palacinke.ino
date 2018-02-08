@@ -27,16 +27,23 @@ void setup()
 }
 
 
+
+
 int co=1;
 void loop()
 {
- 
+ //while(12)
+ //trak_clean();
+ //return;
   int i=0;
   Serial.print(co++);
-  Serial.println("     Nalij!");
-  Serial.println(nalij(DOZIRANJE_STEP));
+  Serial.println(".     Nalij!");
+  if(!nalij(DOZIRANJE_STEP)){
+    trak_clean();
+    return;
+  }
   long m=millis();
-  while(millis()-m< BAKE_TIME*100){
+  while(millis()-m< BAKE_TIME*1000){
     delay(BAKE_TIME);
   }
   

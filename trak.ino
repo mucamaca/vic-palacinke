@@ -4,7 +4,7 @@
 
 #include <Stepper.h>
 
-static Stepper trak_stepper(800, TRAK_PUL_PIN, TRAK_DIR_PIN);
+static Stepper trak_stepper(80000, TRAK_PUL_PIN, TRAK_DIR_PIN);
 
 void trak_test(){trak_stepper.step(-200);}
 
@@ -33,3 +33,24 @@ void trak_move(){
   trak_disable();
   
 }
+
+void trak_clean(){
+  trak_enable();
+  Serial.println()
+;  delay(200);
+  int i;
+  while((!Serial.available()) && Serial.read()!='~'){
+    //Serial.println("slkfhjhasgf\nb\\n\\n\n\n\n");
+    for(i=0;i<3000;i++){
+      trak_stepper.step(-1);
+      delay(1);
+    }
+    delay(25000);
+  }  
+  while(Serial.available())
+    Serial.read();
+  delay(100);
+  trak_disable();
+  
+}
+

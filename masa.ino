@@ -23,13 +23,16 @@ void dosing_setup(){
 
 int nalij(int steps)
 {
-  dosing_enable();
+  
   int i, mil;
-  Serial.println("sajdfs");
   
   while(!Serial.available())
     delay(1);
-  Serial.read();
+  if(Serial.read()=='~'){
+    Serial.print(",nmskfhjasdf");
+    return 0;
+  }
+  dosing_enable();
   for(i=0;i<steps/2;i++){
     dosing_stepper.step(-2);
     delay(1);
