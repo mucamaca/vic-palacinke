@@ -18,36 +18,35 @@ void dosing_disable(){
 
 void dosing_setup(){
   pinMode(DOSING_ENA_PIN, OUTPUT);
+  delay(200);
+  
   dosing_disable();
+  Serial.println("mhaahhahhaha");
+  while(!Serial.available()) delay(1);
+  Serial.read();
+  dosing_enable();
+  Serial.println("meiwooeu");
+  for(int i=0;i<(DOZIRANJE_START+DOZIRANJE_STEP)/2;i++){
+    dosing_stepper.step(-2);
+    delay(1);
+  }
 }
 
 int nalij(int steps)
 {
   
   int i, mil;
-  
-  while(!Serial.available())
-    delay(1);
-  if(Serial.read()=='~'){
-    Serial.print(",nmskfhjasdf");
-    return 0;
-  }
-  dosing_enable();
-  for(i=0;i<steps/2;i++){
-    dosing_stepper.step(-2);
-    delay(1);
-  }
-  mil=millis();
-  while(!Serial.available())
-    delay(1);
-  mil=millis()-mil;
-  Serial.read();
-  
+  delay(100);
   for(i=0;i<steps/2;i++){
     dosing_stepper.step(2);
     delay(1);
   }
+  delay(8000);
+  for(i=0;i<steps/2;i++){
+    dosing_stepper.step(-2);
+    delay(1);
+  }
   delay(50);
-  dosing_disable();
+
   return mil;
 }

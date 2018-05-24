@@ -23,10 +23,11 @@ void trak_setup(){
 
 void trak_move(){
   int i;
+  Serial.println("meowo");
   trak_enable();
   delay(200);
   for(i=0;i<RAZDALJA_MED_GRELCI/2;i++){
-    trak_stepper.step(-2);
+    trak_stepper.step(2);
     delay(1);
   }  
   delay(100);
@@ -41,11 +42,11 @@ void trak_clean(){
   int i;
   while((!Serial.available()) && Serial.read()!='~'){
     //Serial.println("slkfhjhasgf\nb\\n\\n\n\n\n");
-    for(i=0;i<3000;i++){
+    for(i=0;i<5000;i++){
       trak_stepper.step(-1);
       delay(1);
     }
-    delay(25000);
+    
   }  
   while(Serial.available())
     Serial.read();

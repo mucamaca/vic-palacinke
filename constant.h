@@ -19,9 +19,10 @@
 
 // step-lengths
 #define RAZDALJA_MED_GRELCI 18000
-#define DOZIRANJE_STEP 400
+#define DOZIRANJE_STEP 330
+#define DOZIRANJE_START 1006
 
 #define DOZIRANJE_CAJT 3
 
 // baaking-times
-#define BAKE_TIME 9L
+#define BAKE_TIME 10L
